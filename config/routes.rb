@@ -3,7 +3,19 @@ MottFull::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'welcome#index'
+  root 'homes#index'
+  resources :contacts
+  resources :homes do
+    collection do
+      get "main_page"
+      get "lobby"
+      get "rooftop"
+      get "living_room"
+      get "penthouse"
+      get "fact_sheet"
+      get "team"
+    end
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

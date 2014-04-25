@@ -1,0 +1,511 @@
+@charset "utf-8";
+@font-face {
+	font-family: 'TrajanPro-Bold';
+	src: url("TrajanPro-Bold.eot?") format('eot'), 
+	     url("TrajanPro-Bold.otf")  format('opentype'),
+	     url("TrajanPro-Bold.woff") format('woff'), 
+	     url("TrajanPro-Bold.ttf")  format('truetype'),
+	     url("TrajanPro-Bold.svg#TrajanPro-Bold") format('svg');
+}
+
+@font-face {
+	font-family: 'TrajanPro-Regular';
+	src: url("TrajanPro-Regular.eot?") format('eot'), 
+	     url("TrajanPro-Regular.otf")  format('opentype'),
+	     url("TrajanPro-Regular.woff") format('woff'), 
+	     url("TrajanPro-Regular.ttf")  format('truetype'),
+	     url("TrajanPro-Regular.svg#TrajanPro-Regular") format('svg');
+}
+
+@font-face {
+    font-family: 'libre_baskervillebold';
+    src: url("librebaskerville-bold-webfont.eot");
+    src: url("librebaskerville-bold-webfont.eot?#iefix") format('embedded-opentype'),
+         url("librebaskerville-bold-webfont.woff") format('woff'),
+         url("librebaskerville-bold-webfont.ttf") format('truetype'),
+         url("librebaskerville-bold-webfont.svg#libre_baskervillebold") format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'libre_baskervilleitalic';
+    src: url('librebaskerville-italic-webfont.eot');
+    src: url('librebaskerville-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('librebaskerville-italic-webfont.woff') format('woff'),
+         url('librebaskerville-italic-webfont.ttf') format('truetype'),
+         url('librebaskerville-italic-webfont.svg#libre_baskervilleitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'libre_baskervilleregular';
+    src: url('librebaskerville-regular-webfont.eot');
+    src: url('librebaskerville-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('librebaskerville-regular-webfont.woff') format('woff'),
+         url('librebaskerville-regular-webfont.ttf') format('truetype'),
+         url('librebaskerville-regular-webfont.svg#libre_baskervilleregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/****----- Web Fonts ------------------*****/
+
+:focus{
+	outline:none !important;	
+}
+.active{
+	outline:none !important;		
+}
+body#main_page{
+	background:#000;	
+}
+body#fact_sheet{
+	background: url(FV_beast_02.jpg) no-repeat fixed center center / cover rgba(0, 0, 0, 0);	
+}
+body#teams{
+	background: url(FV_beast_03.jpg) no-repeat fixed center center / cover rgba(0, 0, 0, 0);	
+}
+body#second_page {
+    background: url(FV_meadow.jpg) no-repeat fixed center center / cover rgba(0, 0, 0, 0);
+}
+.main_box {
+    border: 4px double #C3862D;
+    height: auto;
+    margin: 50px auto;
+    width: 85%;
+}
+.logo {
+    margin: 100px auto 180px;
+    width: 55%;
+}
+.logo img{
+	width:100%;
+}
+.enter_box {
+    margin: -50px -116px;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    width: 84%;
+}
+.enter_box a {
+    background: url("enter_border.png") no-repeat scroll center center / 100% 68% rgba(0, 0, 0, 0);
+    color: #784c0c;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 20px;
+     line-height: 100px;
+    padding: 6%;
+    text-indent: 75px;
+    text-transform: uppercase;
+    width: 100%;
+}
+.enter_box a:hover{
+	 color: #C3862D;
+	 text-decoration:none;	
+}
+.footer {
+    float: left;
+    width: 100%;
+	margin-bottom:10px;
+}
+.footer img {
+    float: left;
+	margin-top:50px;
+    margin-left: 10%;
+    width: 3%;
+}
+.footer p {
+    float: left;
+	color:#6e6e6e;
+    font-size: 8px;
+	text-transform:uppercase;
+    margin: 50px 1% 0;
+    padding: 0;
+    text-align: left;
+    width: 78%;
+}
+.main_container{
+	width:100%;
+	float:left;
+	padding:2px;
+	margin-top:30px;
+	border:	4px double #C3862D;
+}
+.inner_container{
+	width:100%;
+	float:left;
+	border:	1px solid #C3862D;	
+	background:#f9f6ee;
+	padding:0 5px;
+}
+.menu{
+	width:100%;
+	text-align:center;
+	float:left;
+}
+.menu ul {
+    list-style: none outside none;
+	margin:0 0 10px;
+	position:relative;
+	top:10px;
+    padding: 0;
+}
+.menu li{
+	display:inline-block;
+}
+.menu a {
+    color: #C3862D;
+    font-family: 'TrajanPro-Regular',arial;
+    font-size: 15px;
+    margin-left: 24px;
+    padding-bottom: 6px;
+    text-transform: uppercase;
+}
+.menu a:hover, .active {
+    border-bottom: 5px solid #C3862D;
+    color: #C3862D;
+    text-decoration: none;
+}
+.menu ul ul {
+    display: none;
+    padding: 13px 0;
+    position: absolute;
+    top: 100%;
+    width: 14%;
+}
+.menu ul li:hover > ul{
+	display:block;	
+}
+.menu ul ul li{
+	display:block;	
+	background:#F9F6EE;
+}
+.menu ul ul a {
+    font-size: 12px;
+    left: 0;
+    width: 100%;
+}
+.menu ul ul a:hover{
+	border:none;
+	text-decoration:underline;	
+}
+.content_box{
+	width:100%;
+	height:640px;
+	/*padding:10px;	*/
+	float:left;
+	background:url(border_warrow.jpg) no-repeat;
+	background-position:center center;
+	background-size:100% 100%;
+}
+.content_box1 {
+    border: 4px double #C3862D;
+    float: left;
+    margin-left: 10px;
+    margin-top: 3px;
+    padding: 2px;
+    width: 97%;
+}
+.content_box2{
+	width:100%;
+	padding:10px;	
+	float:left;
+	border:1px solid #C3862D;
+	
+}
+
+.footer_left {
+    margin-left: 3%;
+    width: 14%;
+	float:left;
+}
+.footer_left a{
+	color: #C3862D;
+	font-size:12px;
+}
+.footer_right{
+	color: #C3862D;	
+    margin-right: 2%;
+    width: 14%;
+	float:right;
+	font-size:12px;
+	margin-bottom:10px;
+}
+.footer_logo img{
+	width:12%;
+}
+.footer_logo {
+    bottom: 0px;
+    float: left;
+    position: absolute;
+    text-align: center;
+    width: 80%;
+}
+.content_title{
+	width:50%;
+	float:left;	
+}
+.content_title h4 {
+    color: #C3862D;
+    font-family: 'TrajanPro-Bold',arial;
+    font-size: 32px;
+    margin-left: 12%;
+    margin-top: 140px;
+    padding: 10px;
+	line-height:42px;
+    text-align: center;
+    width: 100%;
+}
+.content_image{
+	border:	1px solid #C3862D;
+	padding:2px;
+	width:30%;
+	margin:46px 10%;
+	float:left;
+}
+.content_inner{
+	border: 4px double #C3862D;
+}
+.content_inner img{
+	width:100%;	
+}
+.content_title p {
+    font-family: 'libre_baskervilleitalic';
+    font-size: 14px;
+    margin: 263px 27% 0;
+    text-align: center;
+    width: 65%;
+}
+.navigation {
+    position: absolute;
+	margin-top:300px;
+    width: 92%;
+}
+.next {
+    float: right;
+	font-family: 'TrajanPro-Regular';
+	color:#C3862D;
+}
+.prev{
+    float: left;
+	font-family: 'TrajanPro-Regular';
+	color:#C3862D;
+	margin-left:15px;
+}
+.next:hover, .prev:hover{
+	color:#C3862D;	
+}
+.content_box_one{
+	 width:24%;
+	 margin:0 3%;
+	 float:left;
+}
+.content_title1{
+	width:100%;
+	float:left;
+	}
+.content_box_one ul{
+	margin:0;
+	padding:0 13px;	
+}
+.content_box_one h3{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;	
+	padding-bottom:3px;
+	font-weight:normal;
+	text-transform:uppercase;
+	border-bottom:1px solid #000;
+	color:#000;
+}
+.content_box_one li {
+    font-family: 'libre_baskervilleregular';		
+	margin-top:2px;
+	font-size:10px;
+}
+.download_form{
+	width:100%;
+	float:left;
+	margin-top:40px;
+	margin-left:3%;	
+}
+.download_form a{
+	font-family: 'TrajanPro-Regular';
+	color:#C3862D;	
+	font-size:12px;
+	font-weight:bold;
+}
+.download_form a:hover{
+	color:#C3862D;		
+}
+.team_box1 {
+    float: left;
+    margin-left: 8%;
+    width: 43%;
+	border:4px double #C3862D;
+	padding:2px;
+}
+.team_box2{
+	width:100%;
+	border:1px solid #C3862D;
+}
+.team_box5{
+    float: left;
+    margin-left: 8%;
+    width: 43%;
+	padding:2px;
+}
+.team_box2 img{
+	width:100%;	
+}
+.team_right{
+	width:45%;
+	float:left;	
+	margin-left:2%;
+}
+.team_right h3{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;	
+	padding-bottom:3px;
+	font-weight:normal;
+	text-transform:uppercase;
+	border-bottom:1px solid #000;
+	color:#000;
+	margin:0;
+}
+.team_right p{
+	margin:10px 0;	
+	font-family: 'libre_baskervilleregular';		
+	font-size:10px;
+}
+.content_box_3{
+	width:100%;
+	float:left;	
+}
+.abt_team{
+	width:35%;
+	margin-bottom:20px;
+}
+.team_box5 h5{
+	border-bottom:1px solid #000;
+	font-family:Verdana, Geneva, sans-serif;
+	margin:0;
+	font-size:14px;	
+	padding-bottom:3px;
+	font-weight:normal;
+
+}
+.team_box5 span{
+	font-weight:bold;
+	font-size:13px;
+	text-transform:uppercase;	
+}
+.team_box5 h3{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;	
+	padding-bottom:3px;
+	font-weight:normal;
+	text-transform:uppercase;
+	border-bottom:1px solid #000;
+	color:#000;
+	margin:0;
+}
+.team_box5 p{
+	margin:10px 0;	
+	font-family: 'libre_baskervilleregular';		
+	font-size:10px;
+}
+.abt_team img{
+	width:100%;	
+}
+.abt_team1{
+	width:20%;
+	float:left;
+	margin:19px 2%;
+	}
+.abt_team1 img{
+	width:100%;	
+}
+.team_box6 {
+	float: left;
+	margin-left: 2%;
+	width: 45%;
+}
+.team_box6 h3{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:13px;	
+	padding-bottom:3px;
+	font-weight:normal;
+	text-transform:uppercase;
+	border-bottom:1px solid #000;
+	color:#000;
+	margin:0;
+}
+.team_box6 p{
+	margin:10px 0;	
+	font-family: 'libre_baskervilleregular';		
+	font-size:10px;
+}
+.lobby_img > img {
+    width: 100%;
+}
+.lobby_img {
+    margin: 3% auto 0;
+    width: 80%;
+}
+.lobby
+{
+	width:10%;
+	color:#c3862d;
+	float:left;
+	font-size: 15px;
+	font-family: 'TrajanPro-Regular',arial;
+}
+.content {
+    margin-top: 2%;
+}
+.lobby_para {
+    float: left;
+    width: 90%;
+	font-family: 'libre_baskervilleitalic';
+	font-size:12.3px;
+	color:#666666;
+
+}
+.prev {
+    color: #C3862D;
+    font-size: 10px;
+    left: 5%;
+    position: absolute;
+    top: 51%;
+	font-family: 'TrajanPro-Regular',arial;
+}
+.next {
+    color: #C3862D;
+    font-size: 10px;
+    left:93%;
+    position: absolute;
+    top: 51%;
+	float:right;
+	font-family: 'TrajanPro-Regular',arial;
+}
+.lobby_para p {
+    margin-bottom: 3%;
+	 margin-left: 28px;
+}
+.rooftop {
+    color: #C3862D;
+    float: left;
+    font-family: 'TrajanPro-Regular',arial;
+    font-size: 13px;
+    width: 10%;
+}
+.lobby_para1 {
+    color: #666666;
+    float: left;
+    font-family: 'libre_baskervilleitalic';
+    font-size: 12.3px;
+    width:39%;
+}

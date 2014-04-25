@@ -1,0 +1,45 @@
+= form_for @contact do |f|
+  %div
+    = f.label :first_name
+    = f.text_field :first_name
+  %div
+    = f.label :last_name
+    = f.text_field :last_name
+  %div
+    = f.label :address
+    = f.text_field :address
+  %div
+    = f.label :city
+    = f.text_field :city
+  %div
+    = f.label :phone
+    = f.text_field :phone
+  %div
+    = f.label :email
+    = f.text_field :email
+  %div
+    = f.label :zip
+    = f.text_field :zip
+  %div
+    = f.label :what_residence_are_you_interested_in?
+    = f.text_field :residence
+  %div
+    = f.label :what_is_your_price_range?
+    = f.text_field :price
+  %div
+    = f.label :how_did_you_hear_about_us?
+    = f.text_field :how_did_you_hear
+  %div
+    = f.label :what_is_your_most_important_feature?
+    = f.text_field :imp_feature
+  %div
+    = f.label :Are_you_represented_by_broaker?
+    = f.text_field :represented_by_broaker
+  %div
+    = f.label :Are_you_broaker?
+    = f.text_field :broaker
+  %div
+    = f.label :Add_Comment
+    = f.text_field :comment
+  %div
+    = f.submit "Send"
