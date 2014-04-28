@@ -1,3 +1,5 @@
+/*Background image helpers*/
+
 .enter_box a {
   background: url(<%= asset_path 'enter_border.jpg' %>) no-repeat scroll center center / 100% 68% rgba(0, 0, 0, 0);
 }
@@ -100,4 +102,16 @@ body#nolita{
     font-weight: normal;
     font-style: normal;
 
+}
+
+/*Bootstrap Font Helpers*/
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+
+  src: url(<%= asset_path 'glyphicons-halflings-regular.eot' %>);
+  src: url(<%= asset_path 'glyphicons-halflings-regular.eot?#iefix' %>) format('embedded-opentype'), 
+       url(<%= asset_path 'glyphicons-halflings-regular.woff' %>) format('woff'), 
+       url(<%= asset_path 'glyphicons-halflings-regular.ttf' %>) format('truetype'), 
+       url(<%= asset_path 'glyphicons-halflings-regular.svg#glyphicons_halflingsregular' %>) format('svg');
 }

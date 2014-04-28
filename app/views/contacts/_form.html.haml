@@ -56,8 +56,7 @@
                     .contact_lower_left
                       .option_box
                         %span WHAT RESIDENCE ARE YOU INTERESTED IN?
-                        %select
-                          %option
+                        = f.select :residence, Contact::RESIDENCE, :prompt => ""
                       .option_box
                         %span WHAT IS YOUR PRICE RANGE?
                         %select
@@ -65,12 +64,10 @@
                     .contact_lower_right
                       .option_box
                         %span HOW DID YOU HEAR ABOUT US?
-                        %select
-                          %option
+                        = f.select :how_did_you_hear, Contact::HEAR, :prompt => ""
                       .option_box
                         %span WHAT IS YOUR MOST IMPORTANT FEATURE?
-                        %select
-                          %option
+                        = f.select :how_did_you_hear, Contact::FEATURE, :prompt => ""
                     .clearfix  
                     .contact_lower_left1
                       .contact_box1

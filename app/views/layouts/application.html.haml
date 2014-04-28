@@ -2,7 +2,19 @@
 %html
   %head
     %title MottFull
-    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = stylesheet_link_tag "style" 
+    = stylesheet_link_tag "custom"
+    = stylesheet_link_tag "bootstrap"
+    = stylesheet_link_tag "bootstrap_theme"
+    = stylesheet_link_tag "ekko_lightbox"
+    = stylesheet_link_tag "custom_file"
+
+    = javascript_include_tag "myjs"
+    = #javascript_include_tag "script"
+    = javascript_include_tag "bootstrap"
+    = #javascript_include_tag "wowslider"
+
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body

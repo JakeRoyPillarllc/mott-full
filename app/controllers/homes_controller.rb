@@ -45,4 +45,8 @@ class HomesController < ApplicationController
   def press
     
   end
+
+  def legal
+    
+  end
 end

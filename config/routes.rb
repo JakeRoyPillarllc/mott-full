@@ -20,6 +20,7 @@ MottFull::Application.routes.draw do
       get "map"
       get "availability"
       get "press"
+      get "legal"
     end
   end
 

@@ -1,4 +1,4 @@
-%body#second_page
+%body#nolita
   .container
     .row
       .col-lg-12.col-xs-12
@@ -6,23 +6,169 @@
           .inner_container
             .menu
               = render :partial => "main_menu"
-            .content_box
+            .content_box.main
               .prev
                 PREV
               .next
                 NEXT
-              .lobby_img
-                %a{href: ""}
-                  = image_tag "image_nal.png"
-                .content
-                  .lobby nolita, nyc
-                  .lobby_para
-                    %p
-                      “Qui ditatem oluptas maxime peritati us mod mil molorerit quia volupta. Bus modis rectorpore, cor rerehen imporita sped ut re, invel modis re
-                      torpore. Ecus. Nulpa conseque dolorenitis quoditaquo velent quo te nossimp orpost velesto consed es quis molupta tibusan ihicilla dolorer ciissun.
+              .mainner_box
+                #bh_slide_1
+                  .main_box_press.wrapper-parent
+                    .nolita_box1
+                      %table{cellpadding: "2", cellspacing: "2"}
+                        %tr
+                          %td
+                            %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("L1030352_MF.jpg")}
+                              = image_tag "L1030352_MF.jpg"
+                          %td
+                            %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("L1030349_mf.jpg")}
+                              = image_tag "L1030349_mf.jpg"
+                        %tr
+                          %td
+                            %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("L1030369_mf.jpg")}
+                              = image_tag "L1030369_mf.jpg"
+                          %td
+                            %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("L1030353_MF.jpg")}
+                              = image_tag "L1030353_MF.jpg"
+                      %table
+                        %tr
+                          %td{style: "width:70%"}
+                            %a.hieght{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("L1030375_mf.jpg")}
+                              = image_tag "L1030375_mf.jpg"
+                          %td{style: "width:30%"}
+                            %a.hieght{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("L1030375_mf.jpg")}
+                              = image_tag "L1030375_mf.jpg"
+                    .nolita_box1
+                      %table{cellpadding: "2", cellspacing: "2"}
+                        %tr
+                          %td{colspan: "2"}
+                            %a.hieght{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("L1030374_mf.jpg")}
+                              = image_tag "L1030374_mf.jpg"
+                        %tr
+                          %td
+                            %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("L1030350_mf.jpg")}
+                              = image_tag "L1030350_mf.jpg"
+                          %td
+                            %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("L1030392.jpg")}
+                              = image_tag "L1030392.jpg"
+                        %tr
+                          %td
+                            %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("L1030365_mf.jpg")}
+                              = image_tag "L1030365_mf.jpg"
+                          %td
+                            %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("img_7573_mf.jpg")}
+                              = image_tag "img_7573_mf.jpg"
+                  .main_box_press.wrapper-parent
+                    .nolita_box1
+                      %table{cellpadding: "2", cellspacing: "2"}
+                        %tr
+                          %td
+                            %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("L1030352_MF.jpg")}
+                              = image_tag "L1030352_MF.jpg"
+                          %td
+                            %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("L1030349_mf.jpg")}
+                              = image_tag "L1030349_mf.jpg"
+                        %tr
+                          %td
+                            %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("L1030369_mf.jpg")}
+                              = image_tag "L1030369_mf.jpg"
+                          %td
+                            %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("L1030353_MF.jpg")}
+                              = image_tag "L1030353_MF.jpg"
+                      %table
+                        %tr
+                          %td{style: "width:70%"}
+                            %a.hieght{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("L1030375_mf.jpg")}
+                              = image_tag "L1030375_mf.jpg"
+                          %td{style: "width:30%"}
+                            %a.hieght{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("L1030375_mf.jpg")}
+                              = image_tag "L1030375_mf.jpg"
+                    .nolita_box1
+                      %table{cellpadding: "2", cellspacing: "2"}
+                        %tr
+                          %td{colspan: "2"}
+                            %a.hieght{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("L1030374_mf.jpg")}
+                              = image_tag "L1030374_mf.jpg"
+                        %tr
+                          %td
+                            %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("L1030350_mf.jpg")}
+                              = image_tag "L1030350_mf.jpg"
+                          %td
+                            %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("L1030392.jpg")}
+                              = image_tag "L1030392.jpg"
+                        %tr
+                          %td
+                            %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("L1030365_mf.jpg")}
+                              = image_tag "L1030365_mf.jpg"
+                          %td
+                            %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("img_7573_mf.jpg")}
+                              = image_tag "img_7573_mf.jpg"
+              .content_nolita
+                .lobby nolita, nyc
+                .lobby_para
+                  %p
+                    “Qui ditatem oluptas maxime peritati us mod mil molorerit quia volupta. Bus modis rectorpore, cor rerehen imporita sped ut re, invel modis re
+                    torpore. Ecus. Nulpa conseque dolorenitis quoditaquo velent quo te nossimp orpost velesto consed es quis molupta tibusan ihicilla dolorer ciissun.
             .footer
               .footer_left
-                %a{href: "legal.html"} Legal
+                %a{href: legal_homes_path} Legal
               .footer_right Alfa Development © 2014
             .footer_logo
               = image_tag "199-motto_logo.png"
+:javascript
+  $(document).ready(function ($) {
+    // delegate calls to data-toggle="lightbox"
+    $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+      event.preventDefault();
+      return $(this).ekkoLightbox({
+        onShown: function() {
+          if (window.console) {
+            return console.log('Checking our the events huh?');
+          }
+        }
+      });
+    });
+    //Programatically call
+    $('#open-image').click(function (e) {
+      e.preventDefault();
+      $(this).ekkoLightbox();
+    });
+    $('#open-youtube').click(function (e) {
+      e.preventDefault();
+      $(this).ekkoLightbox();
+    });
+  });
+
+  // Custom Slider
+  var cur_slide=0;
+  var bh_totel_slide = $('.main_box_press').length;
+  var bh_neg_total = 0-bh_totel_slide;
+  
+  $('.next').click(function(e) {
+    $('.prev').show();
+    bh_slide('right');
+    e.preventDefault();
+  });
+  
+  $('.prev').click(function(e) {
+    $('.next').show();
+    bh_slide('left');
+    e.preventDefault();
+  });
+  
+  function bh_slide(dir) {
+    var  slide=0 
+    var left_css
+    if(dir == 'left') 
+      cur_slide++;
+    else
+      cur_slide--;
+      slide=cur_slide;
+      left_css = slide*1105;
+      left_css += 'px';
+    $('#bh_slide_1').css('margin-left',left_css);
+    if( (cur_slide) == (bh_neg_total+1) )
+      $('.next').hide();
+    if( (cur_slide) == 0 ) 
+      $('.prev').hide();
+  }

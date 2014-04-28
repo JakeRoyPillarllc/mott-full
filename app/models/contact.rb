@@ -23,4 +23,7 @@
 #
 
 class Contact < ActiveRecord::Base
+	RESIDENCE = %w(Half-Floor2-Bedrooms Full-Floor3-Bedrooms Penthouse)
+	HEAR = %w(Art+Auction Broker Corcoran-Website Edible-Magazine Gallery-Guide Google Live-in-Neighborhood New-York-Magazine New-York-Post New-York-Times Other Press Referral Signage Wall-Street-Journal)
+  FEATURE = %w(Location Size LEED-Certification Amenities)
 end
