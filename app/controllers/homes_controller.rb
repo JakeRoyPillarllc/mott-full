@@ -26,4 +26,23 @@ class HomesController < ApplicationController
   def team
   	
   end
+
+  def kitchen
+    
+  end
+  def bathroom
+    
+  end
+  def nolita
+    
+  end
+  def map
+    
+  end
+  def availability
+    
+  end
+  def press
+    
+  end
 end

@@ -1,0 +1,28 @@
+%body#second_page
+  .container
+    .row
+      .col-lg-12.col-xs-12
+        .main_container
+          .inner_container
+            .menu
+              = render :partial => "main_menu"
+            .content_box
+              .prev
+                PREV
+              .next
+                NEXT
+              .lobby_img
+                %a{href: ""}
+                  = image_tag "image_nal.png"
+                .content
+                  .lobby nolita, nyc
+                  .lobby_para
+                    %p
+                      “Qui ditatem oluptas maxime peritati us mod mil molorerit quia volupta. Bus modis rectorpore, cor rerehen imporita sped ut re, invel modis re
+                      torpore. Ecus. Nulpa conseque dolorenitis quoditaquo velent quo te nossimp orpost velesto consed es quis molupta tibusan ihicilla dolorer ciissun.
+            .footer
+              .footer_left
+                %a{href: "legal.html"} Legal
+              .footer_right Alfa Development © 2014
+            .footer_logo
+              = image_tag "199-motto_logo.png"

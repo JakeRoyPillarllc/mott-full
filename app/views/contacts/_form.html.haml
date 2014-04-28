@@ -1,45 +1,92 @@
-= form_for @contact do |f|
-  %div
-    = f.label :first_name
-    = f.text_field :first_name
-  %div
-    = f.label :last_name
-    = f.text_field :last_name
-  %div
-    = f.label :address
-    = f.text_field :address
-  %div
-    = f.label :city
-    = f.text_field :city
-  %div
-    = f.label :phone
-    = f.text_field :phone
-  %div
-    = f.label :email
-    = f.text_field :email
-  %div
-    = f.label :zip
-    = f.text_field :zip
-  %div
-    = f.label :what_residence_are_you_interested_in?
-    = f.text_field :residence
-  %div
-    = f.label :what_is_your_price_range?
-    = f.text_field :price
-  %div
-    = f.label :how_did_you_hear_about_us?
-    = f.text_field :how_did_you_hear
-  %div
-    = f.label :what_is_your_most_important_feature?
-    = f.text_field :imp_feature
-  %div
-    = f.label :Are_you_represented_by_broaker?
-    = f.text_field :represented_by_broaker
-  %div
-    = f.label :Are_you_broaker?
-    = f.text_field :broaker
-  %div
-    = f.label :Add_Comment
-    = f.text_field :comment
-  %div
-    = f.submit "Send"
+%body#contact
+  .container
+    .row
+      .col-lg-12.col-xs-12
+        .main_container
+          .inner_container
+            .menu
+              = render :partial => "homes/main_menu"
+            .content_box1
+              .content_box2{style: "background:#e9f4e9;"}
+                .clear  
+                .contact_header
+                  %h3
+                    199 Mott street sales gallery
+                    %span by Appointment Only
+                  .contact_box
+                    %p
+                      201 Mott Street — Parlor Floor
+                      New York NY 10012
+                  .contact_box{style: "float:left; text-align:left;"}
+                    %p Tel:  (212) 343 0199
+                    %p Fax: (212) 344 0199
+                  .contact_box{style: "float:right; text-align:right;"}
+                    %p Email: info@199mott.com
+                .clearfix
+                .contact_form
+                  = form_for @contact do |f|
+                    %h2 Please fill out this form to learn more about 199 mott
+                    .contact_left
+                      .text_box
+                        %span FIRST NAME*
+                        = f.text_field :first_name
+                      .text_box
+                        %span LAST NAME*
+                        = f.text_field :last_name
+                      .text_box
+                        %span ADDRESS*
+                        = f.text_field :address
+                      .text_box
+                        %span CITY
+                        = f.text_field :city
+                    .contact_left{style: "margin-left:5%"}
+                      .text_box
+                        %span Phone
+                        = f.text_field :phone
+                      .text_box
+                        %span Email*
+                        = f.text_field :email
+                      .text_box
+                        %span State*
+                        = f.text_field :state
+                      .text_box
+                        %span Zip
+                        = f.text_field :zip
+                    .clearfix
+                    .contact_lower_left
+                      .option_box
+                        %span WHAT RESIDENCE ARE YOU INTERESTED IN?
+                        %select
+                          %option
+                      .option_box
+                        %span WHAT IS YOUR PRICE RANGE?
+                        %select
+                          %option
+                    .contact_lower_right
+                      .option_box
+                        %span HOW DID YOU HEAR ABOUT US?
+                        %select
+                          %option
+                      .option_box
+                        %span WHAT IS YOUR MOST IMPORTANT FEATURE?
+                        %select
+                          %option
+                    .clearfix  
+                    .contact_lower_left1
+                      .contact_box1
+                        %span Are you represented by a broker?
+                        %a{href: ""} Y
+                        %a{href: ""} N
+                    .contact_lower_left2
+                      .contact_box1
+                        %span Are you a broker?*
+                        %a{href: ""} Y
+                        %a{href: ""} N
+                        %span.required * required fields
+                    .clearfix  
+                    .additional_comment
+                      %span Additional Comments
+                      %textarea{cols: "2", rows: "5"}
+                    .clearfix  
+                    .sumit_btn
+                      = f.submit "Submit", :class => "save_contact"

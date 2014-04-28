@@ -5,52 +5,23 @@
         .main_container
           .inner_container
             .menu
-              %ul
-                %li
-                  %a.active{href: main_page_homes_path} The building
-                  %ul
-                    %li
-                      %a{href: lobby_homes_path} Lobby
-                    %li
-                      %a{href: rooftop_homes_path} Rooftop Lounge
-                %li
-                  %a{href: living_room_homes_path} Residencies
-                  %ul
-                    %li
-                      %a{href: living_room_homes_path} living room
-                    %li
-                      %a{href: "#"} Kitchen
-                    %li
-                      %a{href: "#"} Bathroom
-                    %li
-                      %a{href: penthouse_homes_path} Penthouse
-                %li
-                  %a{href: "#"} Neighborhood
-                  %ul
-                    %li
-                      %a{href: "#"} Nolita
-                    %li
-                      %a{href: "#"} Map
-                %li
-                  %a{href: "#"} Availability
-                %li
-                  %a{href: fact_sheet_homes_path} Fact Sheet
-                %li
-                  %a{href: team_homes_path} Team
-                %li
-                  %a{href: "#"} Press
-                %li
-                  %a{href: "#"} Contact
+              = render :partial => "main_menu"
             .content_box
               .prev
                 PREV
               .next
                 NEXT
               .lobby_img
-                = image_tag "lobby.png"
+                #wowslider-container1
+                  .ws_images
+                    %ul
+                      %li
+                        = image_tag "living_room.png", :id => "wows1_0"
+                      %li
+                        = image_tag "lobby.png", :id => "wows1_1"
+                  .ws_shadow
                 .content
-                  .lobby
-                    LOBBY
+                  .lobby LOBBY
                   .lobby_para
                     %p
                       “Qui ditatem oluptas maxime peritati us mod mil molorerit quia volupta. Bus modis rectorpore, cor rerehen imporita sped ut re, invel modis re

@@ -1,0 +1,21 @@
+%body#press
+  .container
+    .row
+      .col-lg-12.col-xs-12
+        .main_container
+          .inner_container
+            .menu
+              = render :partial => "main_menu"
+            .content_box
+              .navigation
+                %a.prev{href: ""} Prev
+                %a.next{href: ""} Next
+              .main_box_press
+                .press_box
+                  = image_tag "press.png"
+            .footer
+              .footer_left
+                %a{href: "legal.html"} Legal
+              .footer_right Alfa Development © 2014
+            .footer_logo
+              = image_tag "199-motto_logo.png"

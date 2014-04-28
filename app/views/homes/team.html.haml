@@ -5,42 +5,7 @@
         .main_container
           .inner_container
             .menu
-              %ul
-                %li
-                  %a{href: main_page_homes_path} The building
-                  %ul
-                    %li
-                      %a{href: lobby_homes_path} Lobby
-                    %li
-                      %a{href: rooftop_homes_path} Rooftop Lounge
-                %li
-                  %a{href: living_room_homes_path} Residencies
-                  %ul
-                    %li
-                      %a{href: living_room_homes_path} living room
-                    %li
-                      %a{href: "#"} Kitchen
-                    %li
-                      %a{href: "#"} Bathroom
-                    %li
-                      %a{href: penthouse_homes_path} Penthouse
-                %li
-                  %a{href: "#"} Neighborhood
-                  %ul
-                    %li
-                      %a{href: "#"} Nolita
-                    %li
-                      %a{href: "#"} Map
-                %li
-                  %a{href: "#"} Availability
-                %li
-                  %a{href: fact_sheet_homes_path} Fact Sheet
-                %li
-                  %a.active{href: team_homes_path} Team
-                %li
-                  %a{href: "#"} Press
-                %li
-                  %a{href: "#"} Contact
+              = render :partial => "main_menu"
             .content_box1
               .content_box2
                 .clear  

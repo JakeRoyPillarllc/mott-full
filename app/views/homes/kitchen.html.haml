@@ -1,0 +1,78 @@
+%body#living_room
+  .container
+    .row
+      .col-lg-12.col-xs-12
+        .main_container
+          .inner_container
+            .menu
+              = render :partial => "main_menu"
+            .content_box
+              %a{href: "javascript:void(0);"}
+                .prev
+                  PREV
+              %a{href: "javascript:void(0);"}
+                .next
+                  NEXT
+              .lobby_img
+                #wowslider-container1
+                  .ws_images
+                    %ul
+                      %li
+                        = image_tag "living_room.png", :id => "wows1_0"
+                      %li
+                        = image_tag "lobby.png", :id => "wows1_1"
+                  .ws_shadow
+                .content
+                  .rooftop
+                    typical
+                    kitchen
+                  .lobby_para1
+                    %p
+                      “Qui ditatem oluptas maxime peritati us mod mil molorerit
+                      quia volupta. Bus modis rectorpore, cor rerehen imporita sped.
+                  .kitchen_right
+                    %ul.kitchen_right1.wrapper-parent
+                      %li
+                        %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: "images/kitchen.jpg"}
+                          = image_tag "Typical-Oven_F24_PRO_XV.png"
+                      %li
+                        %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: "images/Penthouse&living-0110_MF.png"}
+                          = image_tag "Typical-Cooktop_QB30_4_00_X_0.png"
+                      %li
+                        %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: "images/kitchen.jpg"}
+                          = image_tag "BeauxArts-08_magnoliawhite4.jpg"
+                      %li
+                        %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: "images/kitchen.jpg"}
+                          = image_tag "H_4086_BM_Speed_Oven_2.png"
+                      %li
+                        %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: "images/Penthouse&living-0110_MF.png"}
+                          = image_tag "L1030604.png"
+            .footer
+              .footer_left
+                %a{href: "legal.html"} Legal
+              .footer_right Alfa Development © 2014
+            .footer_logo
+              = image_tag "199-motto_logo.png"
+  :javascript
+    $(document).ready(function ($) {
+    // delegate calls to data-toggle="lightbox"
+      $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+        event.preventDefault();
+        return $(this).ekkoLightbox({
+          onShown: function() {
+            if (window.console) {
+              return console.log('Checking our the events huh?');
+            }
+          }
+        });
+      });
+      //Programatically call
+      $('#open-image').click(function (e) {
+        e.preventDefault();
+        $(this).ekkoLightbox();
+      });
+      $('#open-youtube').click(function (e) {
+        e.preventDefault();
+        $(this).ekkoLightbox();
+      });
+    });

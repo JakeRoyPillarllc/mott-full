@@ -14,6 +14,12 @@ MottFull::Application.routes.draw do
       get "penthouse"
       get "fact_sheet"
       get "team"
+      get "kitchen"
+      get "bathroom"
+      get "nolita"
+      get "map"
+      get "availability"
+      get "press"
     end
   end
 

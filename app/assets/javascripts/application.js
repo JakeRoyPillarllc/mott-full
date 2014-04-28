@@ -14,4 +14,8 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require turbolinks
+//= require bootstrap.js
+//= require myjs.js
+//= require script.js
+//= require wowslider.js
 //= require_tree .
