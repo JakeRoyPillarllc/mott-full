@@ -29,8 +29,8 @@ MottFull::Application.configure do
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = true
 
-  config.assets.precompile += %w( style.css custom.css custom_file.css.erb bootstrap.css bootstrap_theme.css ekko_lightbox.css )
-  config.assets.precompile += %w( bootstrap.js myjs.js script.js wowslider.js )
+  config.assets.precompile += %w( style.css custom.css custom_file.css.erb bootstrap.css bootstrap_theme.css )
+  config.assets.precompile += %w( bootstrap.js )
   config.assets.precompile = ['*.js', '*.css', '*.css.erb']
   # Generate digests for assets URLs.
   config.assets.digest = true

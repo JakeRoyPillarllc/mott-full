@@ -5058,13 +5058,12 @@ a.list-group-item-danger.active:focus {
 }
 .close {
   float: right;
-  font-size: 21px;
-  font-weight: bold;
+  font-size: 45px;
+  font-weight: normal;
   line-height: 1;
-  color: #000;
+  color: #C3862D;
   text-shadow: 0 1px 0 #fff;
   filter: alpha(opacity=20);
-  opacity: .2;
 }
 .close:hover,
 .close:focus {
@@ -5142,15 +5141,17 @@ button.close {
 }
 .modal-backdrop.in {
   filter: alpha(opacity=50);
-  opacity: .5;
+  /*opacity: .5;*/
 }
 .modal-header {
   min-height: 16.42857143px;
   padding: 15px;
   border-bottom: 1px solid #e5e5e5;
+  display: block;
 }
 .modal-header .close {
-  margin-top: -2px;
+  margin-right: 30px;
+  margin-top: -20px;
 }
 .modal-title {
   margin: 0;
