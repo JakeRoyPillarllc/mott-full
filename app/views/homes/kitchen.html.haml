@@ -15,11 +15,7 @@
                   NEXT
               .mainner_box
                 #bh_slide_1
-                  .main_box_press.wrapper-parent.lobby_img
-                    = image_tag "living_room.png"
-                  .main_box_press.wrapper-parent.lobby_img
-                    = image_tag "lobby.png"
-                  .ws_shadow
+                  = render :partial => "common_script"
                 .content
                   .rooftop
                     typical
@@ -45,12 +41,7 @@
                       %li
                         %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("Penthouse&living-0110_MF.png")}
                           = image_tag "L1030604.png"
-            .footer
-              .footer_left
-                %a{href: legal_homes_path} Legal
-              .footer_right Alfa Development © 2014
-            .footer_logo
-              = image_tag "199-motto_logo.png"
+            = render :partial => "footer"
 :javascript
   $(document).ready(function ($) {
   // delegate calls to data-toggle="lightbox"
