@@ -1,4 +1,6 @@
 %body#contact
+  #div-load{:style => "display:none"}
+  #div-another-image{:style => "display:none"}
   .container
     .row
       .col-lg-12.col-xs-12
@@ -27,47 +29,58 @@
                   = form_for @contact do |f|
                     %h2 Please fill out this form to learn more about 199 mott
                     .contact_left
-                      .text_box
+                      .text_box#first
                         %span FIRST NAME*
-                        = f.text_field :first_name
-                      .text_box
+                        = f.text_field :first_name, :id => "first_name"
+                        %span#first_name_error
+                      .text_box#last
                         %span LAST NAME*
-                        = f.text_field :last_name
-                      .text_box
+                        = f.text_field :last_name, :id => "last_name"
+                        %span#last_name_error
+                      .text_box#address
                         %span ADDRESS*
-                        = f.text_field :address
-                      .text_box
+                        = f.text_field :address, :id => "address_field"
+                        %span#address_error
+                      .text_box#city
                         %span CITY
-                        = f.text_field :city
+                        = f.text_field :city, :id => "city_field"
+                        %span#city_error
                     .contact_left{style: "margin-left:5%"}
-                      .text_box
+                      .text_box#phone
                         %span Phone
-                        = f.text_field :phone
-                      .text_box
+                        = f.text_field :phone, :id => "phone_field"
+                        %span#phone_error
+                      .text_box#email
                         %span Email*
-                        = f.text_field :email
-                      .text_box
+                        = f.text_field :email, :id => "email_field"
+                        %span#email_error
+                      .text_box#state
                         %span State*
-                        = f.text_field :state
-                      .text_box
+                        = f.text_field :state, :id => "state_field"
+                        %span#state_error
+                      .text_box#zip
                         %span Zip
-                        = f.text_field :zip
+                        = f.text_field :zip, :id => "zip_field"
+                        %span#zip_error
                     .clearfix
                     .contact_lower_left
-                      .option_box
+                      .option_box#residence
                         %span WHAT RESIDENCE ARE YOU INTERESTED IN?
                         = f.select :residence, Contact::RESIDENCE, :prompt => ""
-                      .option_box
+                        %span#residence_error
+                      .option_box#price
                         %span WHAT IS YOUR PRICE RANGE?
                         %select
                           %option
                     .contact_lower_right
-                      .option_box
+                      .option_box#hear
                         %span HOW DID YOU HEAR ABOUT US?
                         = f.select :how_did_you_hear, Contact::HEAR, :prompt => ""
-                      .option_box
+                        %span#hear_error
+                      .option_box#feature
                         %span WHAT IS YOUR MOST IMPORTANT FEATURE?
-                        = f.select :how_did_you_hear, Contact::FEATURE, :prompt => ""
+                        = f.select :imp_feature, Contact::FEATURE, :prompt => ""
+                        %span#feature_error
                     .clearfix  
                     .contact_lower_left1
                       .contact_box1
@@ -81,10 +94,279 @@
                         %a{href: ""} N
                         %span.required * required fields
                     .clearfix  
-                    .additional_comment
+                    .additional_comment#comment
                       %span Additional Comments
-                      %textarea{cols: "2", rows: "5"}
+                      = f.text_area :comment, :cols => "2", :rows => "5", :id => "comment_field"
+                      %span#comment_error
                     .clearfix  
                     .sumit_btn
                       = f.submit "Submit", :class => "save_contact"
             = render :partial => "homes/footer"
+
+:javascript
+  $(document).ready(function(){
+    $(".save_contact").click(function(){
+      var first_name = $("#first_name").val()
+      var last_name = $("#last_name").val()
+      var address_field = $("#address_field").val()
+      var city_field = $("#city_field").val()
+      var phone_field = $("#phone_field").val()
+      var email_field = $("#email_field").val()
+      var state_field = $("#state_field").val()
+      var zip_field = $("#zip_field").val()
+      var residence = $("#contact_residence").val()
+      var hear = $("#contact_how_did_you_hear").val()
+      var hear = $("#contact_how_did_you_hear").val()
+      var feature = $("#contact_imp_feature").val()
+      var comment = $("#comment_field").val()
+      var filter = /^[0-9-+]+$/;
+      var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+      if(first_name == ""){
+        $("#last_name_error").html("");
+        $("#address_error").html("");
+        $("#city_error").html("");
+        $("#phone_error").html("");
+        $("#email_error").html("");
+        $("#state_error").html("");
+        $("#zip_error").html("");
+        $("#residence_error").html("");
+        $("#hear_error").html("");
+        $("#feature_error").html("");
+        $("#comment_error").html("");
+        $("#first_name_error").html("<font color ='red'>Please enter your first name</font>")
+        $('html, body').animate({
+          scrollTop: $("#first").offset().top
+        },500);
+        return false;
+      }else
+      if(last_name == ""){
+        $("#first_name_error").html("");
+        $("#address_error").html("");
+        $("#city_error").html("");
+        $("#phone_error").html("");
+        $("#email_error").html("");
+        $("#state_error").html("");
+        $("#zip_error").html("");
+        $("#residence_error").html("");
+        $("#hear_error").html("");
+        $("#feature_error").html("");
+        $("#comment_error").html("");
+        $("#last_name_error").html("<font color ='red'>Please enter your last name</font>")
+        $('html, body').animate({
+          scrollTop: $("#last").offset().top
+        },500);
+        return false;
+      }else
+      if(address_field == ""){
+        $("#first_name_error").html("");
+        $("#last_name_error").html("");
+        $("#city_error").html("");
+        $("#phone_error").html("");
+        $("#email_error").html("");
+        $("#state_error").html("");
+        $("#zip_error").html("");
+        $("#residence_error").html("");
+        $("#hear_error").html("");
+        $("#feature_error").html("");
+        $("#comment_error").html("");
+        $("#address_error").html("<font color ='red'>Please enter your address</font>")
+        $('html, body').animate({
+          scrollTop: $("#address").offset().top
+        },500);
+        return false;
+      }else
+      if(city_field == ""){
+        $("#first_name_error").html("");
+        $("#last_name_error").html("");
+        $("#address_error").html("");
+        $("#phone_error").html("");
+        $("#email_error").html("");
+        $("#state_error").html("");
+        $("#zip_error").html("");
+        $("#residence_error").html("");
+        $("#hear_error").html("");
+        $("#feature_error").html("");
+        $("#comment_error").html("");
+        $("#city_error").html("<font color ='red'>Please enter your city</font>")
+        $('html, body').animate({
+          scrollTop: $("#city").offset().top
+        },500);
+        return false;
+      }else
+      if(!filter.test(phone_field)){
+        $("#first_name_error").html("");
+        $("#last_name_error").html("");
+        $("#city_error").html("");
+        $("#address_error").html("");
+        $("#email_error").html("");
+        $("#state_error").html("");
+        $("#zip_error").html("");
+        $("#residence_error").html("");
+        $("#hear_error").html("");
+        $("#feature_error").html("");
+        $("#comment_error").html("");
+        $("#phone_error").html("<font color ='red'>Please enter your contact number</font>")
+        $('html, body').animate({
+          scrollTop: $("#phone").offset().top
+        },500);
+        return false;
+      }else
+      if(email_field == '') {
+        $("#first_name_error").html("");
+        $("#last_name_error").html("");
+        $("#city_error").html("");
+        $("#address_error").html("");
+        $("#state_error").html("");
+        $("#zip_error").html("");
+        $("#residence_error").html("");
+        $("#hear_error").html("");
+        $("#feature_error").html("");
+        $("#comment_error").html("");
+        $("#email_error").html("<font color ='red'>Please enter your email</font>")
+        $('html, body').animate({
+          scrollTop: $("#email").offset().top
+        },500);
+        return false;
+      }else
+      if(!emailReg.test(email_field)) {
+        $("#first_name_error").html("");
+        $("#last_name_error").html("");
+        $("#city_error").html("");
+        $("#address_error").html("");
+        $("#state_error").html("");
+        $("#zip_error").html("");
+        $("#residence_error").html("");
+        $("#hear_error").html("");
+        $("#feature_error").html("");
+        $("#comment_error").html("");
+        $("#email_error").html("<font color ='red'>Please enter correct email</font>")
+        $('html, body').animate({
+          scrollTop: $("#email").offset().top
+        },500);
+        return false;
+      }else
+      if(state_field == ""){
+        $("#first_name_error").html("");
+        $("#last_name_error").html("");
+        $("#address_error").html("");
+        $("#city_error").html("");
+        $("#phone_error").html("");
+        $("#email_error").html("");
+        $("#zip_error").html("");
+        $("#residence_error").html("");
+        $("#hear_error").html("");
+        $("#feature_error").html("");
+        $("#comment_error").html("");
+        $("#state_error").html("<font color ='red'>Please enter your state</font>")
+        $('html, body').animate({
+          scrollTop: $("#state").offset().top
+        },500);
+        return false;
+      }else
+      if(zip_field == ""){
+        $("#first_name_error").html("");
+        $("#last_name_error").html("");
+        $("#address_error").html("");
+        $("#city_error").html("");
+        $("#phone_error").html("");
+        $("#email_error").html("");
+        $("#state_error").html("");
+        $("#residence_error").html("");
+        $("#hear_error").html("");
+        $("#feature_error").html("");
+        $("#comment_error").html("");
+        $("#zip_error").html("<font color ='red'>Please enter your zip code</font>")
+        $('html, body').animate({
+          scrollTop: $("#zip").offset().top
+        },500);
+        return false;
+      }else
+      if(residence == ""){
+        $("#first_name_error").html("");
+        $("#last_name_error").html("");
+        $("#address_error").html("");
+        $("#city_error").html("");
+        $("#phone_error").html("");
+        $("#email_error").html("");
+        $("#state_error").html("");
+        $("#zip_error").html("");
+        $("#hear_error").html("");
+        $("#feature_error").html("");
+        $("#comment_error").html("");
+        $("#residence_error").html("<font color ='red'>Please select any residence</font>")
+        $('html, body').animate({
+          scrollTop: $("#residence").offset().top
+        },500);
+        return false;
+      }else
+      if(hear == ""){
+        $("#first_name_error").html("");
+        $("#last_name_error").html("");
+        $("#address_error").html("");
+        $("#city_error").html("");
+        $("#phone_error").html("");
+        $("#email_error").html("");
+        $("#state_error").html("");
+        $("#zip_error").html("");
+        $("#residence_error").html("");
+        $("#feature_error").html("");
+        $("#comment_error").html("");
+        $("#hear_error").html("<font color ='red'>Please select how did you hear</font>")
+        $('html, body').animate({
+          scrollTop: $("#hear").offset().top
+        },500);
+        return false;
+      }else
+      if(feature == ""){
+        $("#first_name_error").html("");
+        $("#last_name_error").html("");
+        $("#address_error").html("");
+        $("#city_error").html("");
+        $("#phone_error").html("");
+        $("#email_error").html("");
+        $("#state_error").html("");
+        $("#zip_error").html("");
+        $("#residence_error").html("");
+        $("#hear_error").html("");
+        $("#comment_error").html("");
+        $("#feature_error").html("<font color ='red'>Please select your feature</font>")
+        $('html, body').animate({
+          scrollTop: $("#feature").offset().top
+        },500);
+        return false;
+      }else
+      if($("#comment_field").val().length < 15){
+        $("#first_name_error").html("");
+        $("#last_name_error").html("");
+        $("#address_error").html("");
+        $("#city_error").html("");
+        $("#phone_error").html("");
+        $("#email_error").html("");
+        $("#state_error").html("");
+        $("#zip_error").html("");
+        $("#residence_error").html("");
+        $("#hear_error").html("");
+        $("#feature_error").html("");
+        $("#comment_error").html("<font color ='red'>Atleast 15 characters required!</font>")
+        $('html, body').animate({
+          scrollTop: $("#comment").offset().top
+        },500);
+        return false;
+      }else{
+        $.ajax({
+          type: "POST",
+          url: "/contacts",
+          beforeSend: function() {
+            $("#div-load").show();
+            $("#div-another-image").show();
+          },
+          success: function(data){
+            $("#div-load").hide();
+            $("#div-another-image").hide();
+            alert("Sent suceessfully!!")
+            window.location.href = document.URL
+          }
+        });
+      }
+    })
+  })

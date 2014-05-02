@@ -12,10 +12,12 @@ class ContactsController < ApplicationController
 
 	def create
 		@contact = Contact.new(contact_params)
-		if @contact.save
-			redirect_to root_path
-		else
-			render 'new'
+		respond_to do |format|
+			if @contact.save
+				format.html { redirect_to root_path }
+			else
+				render 'new'
+			end
 		end
 	end
 	

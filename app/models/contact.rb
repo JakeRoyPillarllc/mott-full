@@ -23,7 +23,20 @@
 #
 
 class Contact < ActiveRecord::Base
+  after_create :send_contact_details_to_admin
+
 	RESIDENCE = %w(Half-Floor2-Bedrooms Full-Floor3-Bedrooms Penthouse)
 	HEAR = %w(Art+Auction Broker Corcoran-Website Edible-Magazine Gallery-Guide Google Live-in-Neighborhood New-York-Magazine New-York-Post New-York-Times Other Press Referral Signage Wall-Street-Journal)
   FEATURE = %w(Location Size LEED-Certification Amenities)
+
+  def send_contact_details_to_admin
+    ContactMailer.send_contact_mail(self).deliver
+  end
+
+  def self.to_csv
+    CSV.generate do |csv|
+      csv << column_names
+      csv << self.attributes.values_at(*column_names)
+    end
+  end
 end

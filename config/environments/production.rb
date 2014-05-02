@@ -29,7 +29,7 @@ MottFull::Application.configure do
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = true
 
-  config.assets.precompile += %w( style.css custom.css custom_file.css.erb bootstrap.css bootstrap_theme.css )
+  config.assets.precompile += %w( custom.css custom_file.css.erb bootstrap.css bootstrap_theme.css )
   config.assets.precompile += %w( bootstrap.js )
   config.assets.precompile = ['*.js', '*.css', '*.css.erb']
   # Generate digests for assets URLs.
@@ -80,4 +80,13 @@ MottFull::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+  ActionMailer::Base.smtp_settings = {
+    :address => "smtp.gmail.com",
+    :port => 587,
+    :domain => "gmail.com",
+    :user_name => "xyz@gmail.com",
+    :password => "xyz",
+    :authentication => "plain",
+    :enable_starttls_auto => true
+  }
 end

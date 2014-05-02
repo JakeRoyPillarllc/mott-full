@@ -953,3 +953,23 @@ table tbody,table tr,table td,table th {
   -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
+
+/*Contact us form submission with ajax*/
+
+#div-load {
+  background-color: #777777;
+  height: 100%;
+  opacity: 0.7;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+#div-another-image {
+  /*background-image: url("/assets/ajax-loader.gif");*/
+  height: 100%;
+  opacity: 0.6;
+  position: fixed;
+  width: 100%;
+  z-index: 1001;
+}
