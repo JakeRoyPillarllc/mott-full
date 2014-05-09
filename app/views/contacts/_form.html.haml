@@ -85,13 +85,15 @@
                     .contact_lower_left1
                       .contact_box1
                         %span Are you represented by a broker?
-                        %a{href: ""} Y
-                        %a{href: ""} N
+                        %a{:id => "text_y"} Y
+                        %a{:id => "text_n"} N
+                        = f.hidden_field :represented_by_broaker
                     .contact_lower_left2
                       .contact_box1
                         %span Are you a broker?*
-                        %a{href: ""} Y
-                        %a{href: ""} N
+                        %a{:id => "text_new_y"} Y
+                        %a{:id => "text_new_n"} N
+                        = f.hidden_field :broaker
                         %span.required * required fields
                     .clearfix  
                     .additional_comment#comment
@@ -105,6 +107,36 @@
 
 :javascript
   $(document).ready(function(){
+    $(".contact_lower_left1 #text_n").click(function(){
+      if($("#text_n").text() == "N") {
+        $("#text_n").css( "color", "red" );
+        console.log($("#text_n").css( "color", "red" ).text());
+        $("#contact_represented_by_broaker").attr("value","N")
+      }
+    })
+    $(".contact_lower_left1 #text_y").click(function(){
+      if($("#text_y").text() == "Y") {
+        $("#text_y").css( "color", "blue" );
+        console.log($("#text_y").css( "color", "blue" ).text());
+        $("#contact_represented_by_broaker").attr("value","Y")
+      }
+    })
+
+    $(".contact_lower_left2 #text_new_n").click(function(){
+      if($("#text_new_n").text() == "N") {
+        $("#text_new_n").css( "color", "red" );
+        console.log($("#text_new_n").css( "color", "red" ).text());
+        $("#contact_broaker").attr("value","N")
+      }
+    })
+    $(".contact_lower_left2 #text_new_y").click(function(){
+      if($("#text_new_y").text() == "Y") {
+        $("#text_new_y").css( "color", "blue" );
+        console.log($("#text_new_y").css( "color", "blue" ).text());
+        $("#contact_broaker").attr("value","Y")
+      }
+    })
+
     $(".save_contact").click(function(){
       var first_name = $("#first_name").val()
       var last_name = $("#last_name").val()

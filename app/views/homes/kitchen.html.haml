@@ -7,19 +7,33 @@
             .menu
               = render :partial => "main_menu"
             .content_box.main
-              %a{href: "javascript:void(0);"}
-                .prev
-                  PREV
-              %a{href: "javascript:void(0);"}
-                .next
-                  NEXT
-              .mainner_box
-                #bh_slide_1
-                  = render :partial => "common_script"
+              %a.prev{href: living_room_homes_path, :style => "display:block"} Prev
+              %a.next{href: bathroom_homes_path} Next
+              .lobby_img
+                %div
+                  .ws_images
+                    %ul.wrapper-parent
+                      %li{:style => "list-style: none outside none;"}
+                        %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("living_room.png")}
+                          = image_tag "living_room.png"
+                      %li{style: "display:none"}
+                        %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("Typical-Oven_F24_PRO_XV.png")}
+                          = image_tag "Typical-Oven_F24_PRO_XV.png"
+                      %li{style: "display:none"}
+                        %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("Typical-Cooktop_QB30_4_00_X_0.png")}
+                          = image_tag "Typical-Cooktop_QB30_4_00_X_0.png"
+                      %li{style: "display:none"}
+                        %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("BeauxArts-08_magnoliawhite4.jpg")}
+                          = image_path "BeauxArts-08_magnoliawhite4.jpg"
+                      %li{style: "display:none"}
+                        %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("H_4086_BM_Speed_Oven_2.png")}
+                          = image_tag "H_4086_BM_Speed_Oven_2.png"
+                      %li{style: "display:none"}
+                        %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("L1030604.png")}
+                          = image_tag"L1030604.png"
+                  .ws_shadow
                 .content
-                  .rooftop
-                    typical
-                    kitchen
+                  .rooftop typical kitchen
                   .lobby_para1
                     %p
                       “Qui ditatem oluptas maxime peritati us mod mil molorerit
@@ -27,19 +41,19 @@
                   .kitchen_right
                     %ul.kitchen_right1.wrapper-parent
                       %li
-                        %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("kitchen.jpg")}
+                        %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("Typical-Oven_F24_PRO_XV.png")}
                           = image_tag "Typical-Oven_F24_PRO_XV.png"
                       %li
-                        %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("Penthouse&living-0110_MF.png")}
+                        %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("Typical-Cooktop_QB30_4_00_X_0.png")}
                           = image_tag "Typical-Cooktop_QB30_4_00_X_0.png"
                       %li
-                        %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("kitchen.jpg")}
+                        %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("BeauxArts-08_magnoliawhite4.jpg")}
                           = image_tag "BeauxArts-08_magnoliawhite4.jpg"
                       %li
-                        %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("typical_kitchen.png")}
+                        %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("H_4086_BM_Speed_Oven_2.png")}
                           = image_tag "H_4086_BM_Speed_Oven_2.png"
                       %li
-                        %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("Penthouse&living-0110_MF.png")}
+                        %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("L1030604.png")}
                           = image_tag "L1030604.png"
             = render :partial => "footer"
 :javascript
@@ -66,36 +80,36 @@
     });
   });
 
-    // Custom Slider
-  var cur_slide=0;
-  var bh_totel_slide = $('.main_box_press').length;
-  var bh_neg_total = 0-bh_totel_slide;
+  //   // Custom Slider
+  // var cur_slide=0;
+  // var bh_totel_slide = $('.main_box_press').length;
+  // var bh_neg_total = 0-bh_totel_slide;
   
-  $('.next').click(function(e) {
-    $('.prev').show();
-    bh_slide('right');
-    e.preventDefault();
-  });
+  // $('.next').click(function(e) {
+  //   $('.prev').show();
+  //   bh_slide('right');
+  //   e.preventDefault();
+  // });
   
-  $('.prev').click(function(e) {
-    $('.next').show();
-    bh_slide('left');
-    e.preventDefault();
-  });
+  // $('.prev').click(function(e) {
+  //   $('.next').show();
+  //   bh_slide('left');
+  //   e.preventDefault();
+  // });
   
-  function bh_slide(dir) {
-    var  slide=0 
-    var left_css
-    if(dir == 'left') 
-      cur_slide++;
-    else
-      cur_slide--;
-      slide=cur_slide;
-      left_css = slide*1105;
-      left_css += 'px';
-    $('#bh_slide_1').css('margin-left',left_css);
-    if( (cur_slide) == (bh_neg_total+1) )
-      $('.next').hide();
-    if( (cur_slide) == 0 ) 
-      $('.prev').hide();
-  }
+  // function bh_slide(dir) {
+  //   var  slide=0 
+  //   var left_css
+  //   if(dir == 'left') 
+  //     cur_slide++;
+  //   else
+  //     cur_slide--;
+  //     slide=cur_slide;
+  //     left_css = slide*1105;
+  //     left_css += 'px';
+  //   $('#bh_slide_1').css('margin-left',left_css);
+  //   if( (cur_slide) == (bh_neg_total+1) )
+  //     $('.next').hide();
+  //   if( (cur_slide) == 0 ) 
+  //     $('.prev').hide();
+  // }

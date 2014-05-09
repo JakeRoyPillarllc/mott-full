@@ -859,14 +859,14 @@ font-size:12px;
 .modal {
     bottom: 0;
     display: none;
-    height: 709px!important;
-    left: 158px!important;
+    height: 100% !important;
+    left: 0px!important;
     outline: 0 none;
     overflow: hidden!important;
     position: absolute;
     right: 0;
-    top: 36px!important;
-    width: 78.2%!important;
+    top: 0px!important;
+    width: 100%!important;
     z-index: 1050;
 }
 .modal{
@@ -894,7 +894,7 @@ font-size:12px;
 }
 .ekko-lightbox-container {
     margin: 0 auto !important;
-    width: 67% !important;
+    width: 50% !important;
 }
 .modal-content{
 	box-shadow:none !important;
@@ -972,4 +972,37 @@ table tbody,table tr,table td,table th {
   position: fixed;
   width: 100%;
   z-index: 1001;
+}
+
+/*Press*/
+
+.inner_press_box {
+    float: left;
+    margin: 0 18px 28px 5px;
+    text-align: left;
+    width: 27%;
+}
+.press_box {
+    border: 4px double #C3862D;
+    float: left;
+    height: 235px;
+    overflow: hidden;
+    padding: 2px;
+    margin: 10px 13px;
+    width: 87%;
+}
+.press_box1 {
+    border: 1px solid #C3862D;
+    float: left;
+    width: 100%;
+}
+.press_box img {
+    width: 100%;
+}
+.inner_press_box > a {
+    border-bottom: 1px solid #000000;
+    color: #000000;
+    font-family: Verdana,Geneva,sans-serif;
+    font-size: 9px;
+    padding: 8px 0;
 }

@@ -7,13 +7,12 @@
             .menu
               = render :partial => "main_menu"
             .content_box.main
-              .prev
-                PREV
-              .next
-                NEXT
+              %a.prev
+              %a.next{href: kitchen_homes_path} Next
               .mainner_box
                 #bh_slide_1
-                  = render :partial => "common_script"
+                  .main_box_press.wrapper-parent.lobby_img
+                    = image_tag "living_room.png"
                 .content
                   .rooftop
                     LIVING ROOM
@@ -22,39 +21,3 @@
                       “Qui ditatem oluptas maxime peritati us mod mil molorerit quia volupta. Bus modis rectorpore, cor rerehen imporita sped ut re, invel modis re
                       torpore. Ecus. Nulpa conseque dolorenitis quoditaquo velent quo te nossimp orpost velesto consed es quis molupta tibusan ihicilla dolorer ciissun.
             = render :partial => "footer"
-
-:javascript
-
-// Custom Slider
-  var cur_slide=0;
-  var bh_totel_slide = $('.main_box_press').length;
-  var bh_neg_total = 0-bh_totel_slide;
-  
-  $('.next').click(function(e) {
-    $('.prev').show();
-    bh_slide('right');
-    e.preventDefault();
-  });
-  
-  $('.prev').click(function(e) {
-    $('.next').show();
-    bh_slide('left');
-    e.preventDefault();
-  });
-  
-  function bh_slide(dir) {
-    var  slide=0 
-    var left_css
-    if(dir == 'left') 
-      cur_slide++;
-    else
-      cur_slide--;
-      slide=cur_slide;
-      left_css = slide*1105;
-      left_css += 'px';
-    $('#bh_slide_1').css('margin-left',left_css);
-    if( (cur_slide) == (bh_neg_total+1) )
-      $('.next').hide();
-    if( (cur_slide) == 0 ) 
-      $('.prev').hide();
-  }
