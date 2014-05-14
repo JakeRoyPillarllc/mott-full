@@ -98,7 +98,8 @@ body#nolita
 }
 .logo {
     margin: 100px auto 180px;
-    width: 55%;
+    padding: 20px;
+    width: 65%;
 }
 .logo img{
 	width:100%;
@@ -129,8 +130,8 @@ body#nolita
 	 text-decoration:none;	
 }
 .footer {
-    float: left;
-    width: 100%;
+  float: left;
+  width: 100%;
 	margin-bottom:10px;
 }
 .footer img {
@@ -140,14 +141,14 @@ body#nolita
     width: 3%;
 }
 .footer p {
-    float: left;
+  float: left;
 	color:#6e6e6e;
-    font-size: 8px;
+  font-size: 8px;
 	text-transform:uppercase;
-    margin: 50px 1% 0;
-    padding: 0;
-    text-align: left;
-    width: 78%;
+  margin: 50px 1% 0;
+  padding: 0;
+  text-align: left;
+  width: 78%;
 }
 .main_container{
 	width:100%;
@@ -179,14 +180,17 @@ body#nolita
 	display:inline-block;
 }
 .menu ul ul a{
-	margin:0;	
+	font-size: 10px !important;
+  left: 0;
+  width: 100%;
+  margin: 0;
 }
 .menu a {
     color: #C3862D;
     font-family: 'TrajanPro-Regular',arial;
     font-size: 15px;
     margin-left: 24px;
-    padding-bottom: 6px;
+    padding-bottom: 5px;
     text-transform: uppercase;
 }
 .menu a:hover, .active {
@@ -194,13 +198,19 @@ body#nolita
     color: #C3862D;
     text-decoration: none;
 }
+.menu a:focus, .active {
+    border-bottom: 5px solid #C3862D;
+    color: #C3862D;
+    text-decoration: none;
+}
 .menu ul ul {
     display: none;
-    padding: 13px 0;
+    margin-left: 23px;
+    padding: 11px 0;
     position: absolute;
     top: 100%;
-    width: 14%;
-	z-index:1111;
+    width: 11.4%;
+    z-index: 1111;
 }
 .menu ul li:hover > ul{
 	display:block;	
@@ -251,7 +261,7 @@ body#nolita
 .footer_left a{
 	color: #C3862D;
 	position:relative;
-	z-index:213123;
+	z-index:100;
 	font-size:12px;
 }
 .footer_right{
@@ -413,7 +423,7 @@ body#nolita
 	float:left;	
 }
 .abt_team{
-	width:35%;
+	width:25%;
 	margin-bottom:20px;
 }
 .team_box5 h5{
@@ -710,12 +720,13 @@ body#nolita
 	margin:20px 0 30px;
 }
 .save_contact{
-	border:4px double 	#c89547;
-	padding:10px;
-	color:#c89547;
-	font-weight:bold;
-	text-transform:uppercase;
-	font-family: 'TrajanPro-Regular', arial;
+	color: #C89547;
+  font-family: 'TrajanPro-Regular',arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 26px 50px;
+  text-transform: uppercase;
+  border: 0;
 }
 .sumit_btn a:hover{
 	color:#c89547;	
@@ -729,7 +740,7 @@ body#nolita
 	width:100%;
 }
 .kitchen_right1 img {
-    width: 12%;
+  width: 100%;
 	height:auto;
 }
 .kitchen_right
@@ -737,18 +748,21 @@ body#nolita
     float: left;
     margin-left: 8%;
 }
-ul.kitchen_right1 li
-{
-	display:inline;
-	margin-left:25px;
+ul.kitchen_right1 li {
+  display: inline;
+  float: left;
+  height: 68px;
+  margin-left: 25px;
+  padding: 5px;
 }
 .lobby_para1 p {
     margin-bottom: 3%;
 	 
 }
 .availability_img {
-    margin: 3% auto 0;
-    width: 70%;
+  float: left;
+  margin: 2% 8%;
+  width: 70%;
 }
 .availability_img > img
 {
@@ -770,18 +784,17 @@ ul.kitchen_right1 li
 	
 }
 .availability_table {
-    /*border-bottom: 1px solid #000000;*/
-    float: left;
-    margin: 3% 0 auto;
-    padding-bottom: 4px;
-    text-align: center;
-    width: 100%;
+  float: left;
+  margin: 3% 0 2% 6%;
+  padding-bottom: 4px;
+  text-align: center;
+  width: 835px;
 }
 .residence
 {
-    float: left;
-    font-size: 12px;
-    width: 14%;
+  float: left;
+  font-size: 12px;
+  width: 14%;
 	color:black;
 	font-family: 'TrajanPro-Regular',arial;
 	text-align:left;
@@ -839,6 +852,7 @@ font-size:12px;
 }
 .modal-dialog{
 	max-width:100% !important;
+	margin: 0 auto !important;
 }
 .glyphicon {
     display: inline-block;
@@ -871,7 +885,7 @@ font-size:12px;
 }
 .modal{
 	background:#EDE5DA;
-	opacity:0.9 !important;
+	/*opacity:0.9 !important;*/
 }
 .glyphicon.glyphicon-chevron-left {
     /*background: url("prev.png") no-repeat scroll 0 0 / 100% 100% rgba(0, 0, 0, 0);*/
@@ -889,19 +903,21 @@ font-size:12px;
     width: 61px;
     right: 6px;
 }
-.modal-header{
+/*.modal-header{
 	display:none;	
-}
+}*/
 .ekko-lightbox-container {
     margin: 0 auto !important;
-    width: 50% !important;
+    /*width: 50% !important;*/
 }
 .modal-content{
 	box-shadow:none !important;
 	background:none !important;	
 }
-.img-responsive{
-	box-shadow:0px 0px 9px #000000!important
+.img-responsive {
+    box-shadow: 0 0 10px #222222;
+    margin: 0 auto;
+    position: static;
 }
 
 .press_box1{
@@ -1010,4 +1026,20 @@ table tbody,table tr,table td,table th {
 #press .img-responsive {
     height: 600px;
     margin: 0 auto;
+}
+
+.menu ul.one {
+  width: 9.4%;
+}
+.menu ul.two {
+  width: 13.4%;
+}
+
+/*Kitchen bottom lighbox image hover*/
+.kitchen_right1.wrapper-parent > li:hover {
+  border-bottom: 6px solid #C3862D;
+  float: left;
+}
+.kitchen_right1.wrapper-parent {
+    position: absolute;
 }

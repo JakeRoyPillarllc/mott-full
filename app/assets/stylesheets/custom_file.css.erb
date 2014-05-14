@@ -1,7 +1,7 @@
 /*Background image helpers*/
 
 .enter_box a {
-  background: url(<%= asset_path 'enter_border.jpg' %>) no-repeat scroll center center / 100% 68% rgba(0, 0, 0, 0);
+  background: url(<%= asset_path 'enter_border.png' %>) no-repeat scroll center center / 100% 68% rgba(0, 0, 0, 0);
 }
 
 body#fact_sheet{
@@ -17,23 +17,34 @@ body#second_page {
 }
 
 body#contact{
-	background:url(<%= asset_path 'FV_beast_05.jpg' %>)	no-repeat fixed center center / cover rgba(0, 0, 0, 0);
+	background:url(<%= asset_path 'FV_beast_05.jpg' %>)	repeat fixed center center rgba(0, 0, 0, 0);
 }
 
 body#living_room {
-	background:url(<%= asset_path 'FV_beast_01.jpg' %>) no-repeat fixed center center / cover rgba(0, 0, 0, 0);
+	background:url(<%= asset_path 'FV_beast_01.jpg' %>) repeat fixed center center rgba(0, 0, 0, 0);
 }
 
 body#press{
-	background:url(<%= asset_path 'FV_beast_04.jpg' %>) no-repeat fixed center center / cover rgba(0, 0, 0, 0);	
+	background:url(<%= asset_path 'FV_beast_04.jpg' %>) repeat fixed center center rgba(0, 0, 0, 0);
 }
 body#availability
 {
-	background:url(<%= asset_path 'FV_beast_02.jpg' %>) no-repeat fixed center center / cover rgba(0, 0, 0, 0);
+	background:url(<%= asset_path 'FV_beast_02.jpg' %>) repeat fixed center center rgba(0, 0, 0, 0);
 }
 
 body#nolita{
-	background:url(<%= asset_path "FV_louis5.jpg" %>) no-repeat fixed center center / cover rgba(0, 0, 0, 0);
+	background:url(<%= asset_path "FV_louis5.jpg" %>) repeat fixed center center rgba(0, 0, 0, 0);
+}
+
+#contact .option_box select {
+  -moz-appearance: none;
+  background: url(<%= asset_path "arrow_new.png" %>) no-repeat scroll right center rgba(0, 0, 0, 0);
+  text-indent: 0.01px;
+  text-overflow: "";
+}
+
+#contact .sumit_btn .save_contact {
+    background: url(<%= asset_path "enter_border_submit.png" %>) no-repeat scroll center -1px / 100% 100% rgba(0, 0, 0, 0);
 }
 
 .content_box {

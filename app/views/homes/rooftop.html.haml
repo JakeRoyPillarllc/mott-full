@@ -8,11 +8,11 @@
               = render :partial => "main_menu"
             .content_box.main
               %a.prev{href: lobby_homes_path, :style => "display:block"} Prev
-              %a.next
+              %a.next{href: living_room_homes_path, :style => "display:block"} Next
               .mainner_box
                 #bh_slide_1
                   .main_box_press.wrapper-parent.lobby_img
-                    = image_tag "living_room.png"
+                    = image_tag "rooftop.png"
                 .content
                   .rooftop
                     rooftop

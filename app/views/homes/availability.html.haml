@@ -6,100 +6,368 @@
           .inner_container
             .menu
               = render :partial => "main_menu"
-            .content_box1
-              .content_box2
-                .availability_img
-                  = image_tag "Mott_Full-Website_09-14.png"
-                  .availability_table
-                    .residence
-                      %span.residence_span RESIDENCE
-                      %ul
-                        %li
-                          2
-                        %li.li_color
-                          3A
-                        %li.li_color
-                          3B
-                        %li.li_color
-                          7
-                        %li.li_color
-                          PH
-                    .residence
-                      %span.residence_span EXPOSURE
-                      %ul
-                        %li
-                          South
-                        %li.li_color
-                          South
-                        %li.li_color
-                          South
-                        %li.li_color
-                          South
-                        %li.li_color
-                          South
-                    .residence
-                      %span.residence_span INT/EXT SQFT
-                      %ul
-                        %li
-                          3,038
-                        %li.li_color
-                          693
-                        %li.li_color
-                          892
-                        %li.li_color
-                          892
-                        %li.li_color
-                          892
-                    .residence
-                      %span.residence_span PRICE
-                      %ul
-                        %li
-                          5M
-                        %li.li_color
-                          1.5M
-                        %li.li_color
-                          1.35M
-                        %li.li_color
-                          1.35M
-                        %li.li_color
-                          1.35M
-                    .residence
-                      %span.residence_span CC
-                      %ul
-                        %li
-                          $1,156
-                        %li.li_color
-                          $903
-                        %li.li_color
-                          $1,161
-                        %li.li_color
-                          $1,161
-                        %li.li_color
-                          $1,161
-                    .residence
-                      %span.residence_span TAX
-                      %ul
-                        %li
-                          $329
-                        %li.li_color
-                          $257
-                        %li.li_color
-                          $331
-                        %li.li_color
-                          $331
-                        %li.li_color
-                          $331
-                    .residence
-                      %span.residence_span FLOOR PLAN
-                      %ul
-                        %li
-                          Download PDF
-                        %li.li_color
-                          Download PDF
-                        %li.li_color
-                          Download PDF
-                        %li.li_color
-                          Download PDF
-                        %li.li_color
-                          Download PDF
+            .content_box.main
+              %div
+                %a.prev{href: ""} Prev
+                %a.next{href: ""} Next
+              .mainner_box
+                #bh_slide_1
+                  .main_box_press.wrapper-parent
+                    .availability_img
+                      = image_tag "Mott_Full-Website_09-14.png"
+                    .availability_table
+                      .residence
+                        %span.residence_span RESIDENCE
+                        %ul
+                          %li 2
+                          %li.li_color 3A
+                          %li.li_color 3B
+                          %li.li_color 7
+                          %li.li_color PH
+                      .residence
+                        %span.residence_span EXPOSURE
+                        %ul
+                          %li South
+                          %li.li_color South
+                          %li.li_color South
+                          %li.li_color South
+                          %li.li_color South
+                      .residence
+                        %span.residence_span INT/EXT SQFT
+                        %ul
+                          %li 3,038
+                          %li.li_color 693
+                          %li.li_color 892
+                          %li.li_color 892
+                          %li.li_color 892
+                      .residence
+                        %span.residence_span PRICE
+                        %ul
+                          %li 5M
+                          %li.li_color 1.5M
+                          %li.li_color 1.35M
+                          %li.li_color 1.35M
+                          %li.li_color 1.35M
+                      .residence
+                        %span.residence_span CC
+                        %ul
+                          %li $1,156
+                          %li.li_color $903
+                          %li.li_color $1,161
+                          %li.li_color $1,161
+                          %li.li_color $1,161
+                      .residence
+                        %span.residence_span TAX
+                        %ul
+                          %li $329
+                          %li.li_color $257
+                          %li.li_color $331
+                          %li.li_color $331
+                          %li.li_color $331
+                      .residence
+                        %span.residence_span FLOOR PLAN
+                        %ul
+                          %li
+                            %a{href: ""} Download PDF
+                          %li.li_color
+                            %a{href: ""} Download PDF
+                          %li.li_color
+                            %a{href: ""} Download PDF
+                          %li.li_color
+                            %a{href: ""} Download PDF
+                          %li.li_color
+                            %a{href: ""} Download PDF
+                  .main_box_press.wrapper-parent
+                    .availability_img
+                      = image_tag "Mott_Full-Website_09-14.png"
+                    .availability_table
+                      .residence
+                        %span.residence_span RESIDENCE
+                        %ul
+                          %li.li_color 2
+                          %li 3A
+                          %li.li_color 3B
+                          %li.li_color 7
+                          %li.li_color PH
+                      .residence
+                        %span.residence_span EXPOSURE
+                        %ul
+                          %li.li_color South
+                          %li South
+                          %li.li_color South
+                          %li.li_color South
+                          %li.li_color South
+                      .residence
+                        %span.residence_span INT/EXT SQFT
+                        %ul
+                          %li.li_color 3,038
+                          %li 693
+                          %li.li_color 892
+                          %li.li_color 892
+                          %li.li_color 892
+                      .residence
+                        %span.residence_span PRICE
+                        %ul
+                          %li.li_color 5M
+                          %li 1.5M
+                          %li.li_color 1.35M
+                          %li.li_color 1.35M
+                          %li.li_color 1.35M
+                      .residence
+                        %span.residence_span CC
+                        %ul
+                          %li.li_color $1,156
+                          %li $903
+                          %li.li_color $1,161
+                          %li.li_color $1,161
+                          %li.li_color $1,161
+                      .residence
+                        %span.residence_span TAX
+                        %ul
+                          %li.li_color $329
+                          %li $257
+                          %li.li_color $331
+                          %li.li_color $331
+                          %li.li_color $331
+                      .residence
+                        %span.residence_span FLOOR PLAN
+                        %ul
+                          %li.li_color
+                            %a{href: ""} Download PDF
+                          %li
+                            %a{href: ""} Download PDF
+                          %li.li_color
+                            %a{href: ""} Download PDF
+                          %li.li_color
+                            %a{href: ""} Download PDF
+                          %li.li_color
+                            %a{href: ""} Download PDF
+                  .main_box_press.wrapper-parent
+                    .availability_img
+                      = image_tag "Mott_Full-Website_09-14.png"
+                    .availability_table
+                      .residence
+                        %span.residence_span RESIDENCE
+                        %ul
+                          %li.li_color 2
+                          %li.li_color 3A
+                          %li 3B
+                          %li.li_color 7
+                          %li.li_color PH
+                      .residence
+                        %span.residence_span EXPOSURE
+                        %ul
+                          %li.li_color South
+                          %li.li_color South
+                          %li South
+                          %li.li_color South
+                          %li.li_color South
+                      .residence
+                        %span.residence_span INT/EXT SQFT
+                        %ul
+                          %li.li_color 3,038
+                          %li.li_color 693
+                          %li 892
+                          %li.li_color 892
+                          %li.li_color 892
+                      .residence
+                        %span.residence_span PRICE
+                        %ul
+                          %li.li_color 5M
+                          %li.li_color 1.5M
+                          %li 1.35M
+                          %li.li_color 1.35M
+                          %li.li_color 1.35M
+                      .residence
+                        %span.residence_span CC
+                        %ul
+                          %li.li_color $1,156
+                          %li.li_color $903
+                          %li $1,161
+                          %li.li_color $1,161
+                          %li.li_color $1,161
+                      .residence
+                        %span.residence_span TAX
+                        %ul
+                          %li.li_color $329
+                          %li.li_color $257
+                          %li $331
+                          %li.li_color $331
+                          %li.li_color $331
+                      .residence
+                        %span.residence_span FLOOR PLAN
+                        %ul
+                          %li.li_color
+                            %a{href: ""} Download PDF
+                          %li.li_color
+                            %a{href: ""} Download PDF
+                          %li
+                            %a{href: ""} Download PDF
+                          %li.li_color
+                            %a{href: ""} Download PDF
+                          %li.li_color
+                            %a{href: ""} Download PDF
+                  .main_box_press.wrapper-parent
+                    .availability_img
+                      = image_tag "Mott_Full-Website_09-14.png"
+                    .availability_table
+                      .residence
+                        %span.residence_span RESIDENCE
+                        %ul
+                          %li.li_color 2
+                          %li.li_color 3A
+                          %li.li_color 3B
+                          %li 7
+                          %li.li_color PH
+                      .residence
+                        %span.residence_span EXPOSURE
+                        %ul
+                          %li.li_color South
+                          %li.li_color South
+                          %li.li_color South
+                          %li South
+                          %li.li_color South
+                      .residence
+                        %span.residence_span INT/EXT SQFT
+                        %ul
+                          %li.li_color 3,038
+                          %li.li_color 693
+                          %li.li_color 892
+                          %li 892
+                          %li.li_color 892
+                      .residence
+                        %span.residence_span PRICE
+                        %ul
+                          %li.li_color 5M
+                          %li.li_color 1.5M
+                          %li.li_color 1.35M
+                          %li 1.35M
+                          %li.li_color 1.35M
+                      .residence
+                        %span.residence_span CC
+                        %ul
+                          %li.li_color $1,156
+                          %li.li_color $903
+                          %li.li_color $1,161
+                          %li $1,161
+                          %li.li_color $1,161
+                      .residence
+                        %span.residence_span TAX
+                        %ul
+                          %li.li_color $329
+                          %li.li_color $257
+                          %li.li_color $331
+                          %li $331
+                          %li.li_color $331
+                      .residence
+                        %span.residence_span FLOOR PLAN
+                        %ul
+                          %li.li_color
+                            %a{href: ""} Download PDF
+                          %li.li_color
+                            %a{href: ""} Download PDF
+                          %li.li_color
+                            %a{href: ""} Download PDF
+                          %li
+                            %a{href: ""} Download PDF
+                          %li.li_color
+                            %a{href: ""} Download PDF
+                  .main_box_press.wrapper-parent
+                    .availability_img
+                      = image_tag "Mott_Full-Website_09-14.png"
+                    .availability_table
+                      .residence
+                        %span.residence_span RESIDENCE
+                        %ul
+                          %li.li_color 2
+                          %li.li_color 3A
+                          %li.li_color 3B
+                          %li.li_color 7
+                          %li PH
+                      .residence
+                        %span.residence_span EXPOSURE
+                        %ul
+                          %li.li_color South
+                          %li.li_color South
+                          %li.li_color South
+                          %li.li_color South
+                          %li South
+                      .residence
+                        %span.residence_span INT/EXT SQFT
+                        %ul
+                          %li.li_color 3,038
+                          %li.li_color 693
+                          %li.li_color 892
+                          %li.li_color 892
+                          %li 892
+                      .residence
+                        %span.residence_span PRICE
+                        %ul
+                          %li.li_color 5M
+                          %li.li_color 1.5M
+                          %li.li_color 1.35M
+                          %li.li_color 1.35M
+                          %li 1.35M
+                      .residence
+                        %span.residence_span CC
+                        %ul
+                          %li.li_color $1,156
+                          %li.li_color $903
+                          %li.li_color $1,161
+                          %li.li_color $1,161
+                          %li $1,161
+                      .residence
+                        %span.residence_span TAX
+                        %ul
+                          %li.li_color $329
+                          %li.li_color $257
+                          %li.li_color $331
+                          %li.li_color $331
+                          %li $331
+                      .residence
+                        %span.residence_span FLOOR PLAN
+                        %ul
+                          %li.li_color
+                            %a{href: ""} Download PDF
+                          %li.li_color
+                            %a{href: ""} Download PDF
+                          %li.li_color
+                            %a{href: ""} Download PDF
+                          %li.li_color
+                            %a{href: ""} Download PDF
+                          %li
+                            %a{href: ""} Download PDF
             = render :partial => "footer"
+:javascript
+  var cur_slide=0;
+  var bh_totel_slide = $('.main_box_press').length;
+  var bh_neg_total = 0-bh_totel_slide;
+  
+  $('.next').click(function(e) {
+    $('.prev').show();
+    bh_slide('right');
+    e.preventDefault();
+  });
+  
+  $('.prev').click(function(e) {
+    $('.next').show();
+    bh_slide('left');
+    e.preventDefault();
+  });
+  
+  function bh_slide(dir) {
+    var  slide=0 
+    var left_css
+    if(dir == 'left') 
+         cur_slide++;
+    else
+        cur_slide--;
+    slide=cur_slide;
+    left_css = slide*1105;
+    left_css += 'px';
+    $('#bh_slide_1').css('margin-left',left_css);
+    if( (cur_slide) == (bh_neg_total+1) )
+      $('.next').hide();
+    if( (cur_slide) == 0 ) 
+      $('.prev').hide();
+  }

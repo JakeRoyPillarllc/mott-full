@@ -5057,13 +5057,14 @@ a.list-group-item-danger.active:focus {
   border-radius: 3px;
 }
 .close {
+  color: #000000;
   float: right;
-  font-size: 45px;
-  font-weight: normal;
+  font-size: 40px;
+  font-weight: bold;
   line-height: 1;
-  color: #C3862D;
-  text-shadow: 0 1px 0 #fff;
-  filter: alpha(opacity=20);
+  margin-right: 17%;
+  opacity: 0.2;
+  text-shadow: 0 1px 0 #FFFFFF;
 }
 .close:hover,
 .close:focus {
@@ -5147,11 +5148,11 @@ button.close {
   min-height: 16.42857143px;
   padding: 15px;
   border-bottom: 1px solid #e5e5e5;
-  display: block;
+  /*display: block;*/
 }
 .modal-header .close {
-  margin-right: 30px;
-  margin-top: -20px;
+  /*margin-right: 30px;*/
+  margin-top: -2px;
 }
 .modal-title {
   margin: 0;
