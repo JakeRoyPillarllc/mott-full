@@ -105,11 +105,11 @@ body#nolita
 	width:100%;
 }
 .enter_box {
-    margin: -45px 0px;
+    margin: -50px 0px;
     padding: 0;
     position: absolute;
     text-align: center;
-    width: 85%;
+    width: 84%;
 }
 .enter_box img {
 	height: 100px;
