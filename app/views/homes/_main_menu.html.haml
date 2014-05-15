@@ -1,13 +1,13 @@
 %ul
   %li
-    %a{href: main_page_homes_path} The building
+    %a{href: main_page_homes_path, :class => is_active('main_page')} The building
     %ul
       %li
         %a{href: lobby_homes_path} Lobby
       %li
         %a{href: rooftop_homes_path} Rooftop Lounge
   %li
-    %a{href: living_room_homes_path} Residences
+    %a{href: living_room_homes_path, :class => is_active('living_room')} Residences
     %ul.one
       %li
         %a{href: living_room_homes_path} living room
@@ -18,19 +18,19 @@
       %li
         %a{href: penthouse_homes_path} Penthouse
   %li
-    %a{href: nolita_homes_path} Neighborhood
+    %a{href: nolita_homes_path, :class => is_active('nolita')} Neighborhood
     %ul.two
       %li
         %a{href: nolita_homes_path} Nolita
       %li
         %a{href: map_homes_path} Map
   %li
-    %a{href: availability_homes_path} Availability
+    %a{href: availability_homes_path, :class => is_active('availability')} Availability
   %li
-    %a{href: fact_sheet_homes_path} Fact Sheet
+    %a{href: fact_sheet_homes_path, :class => is_active('fact_sheet')} Fact Sheet
   %li
-    %a{href: team_homes_path} Team
+    %a{href: team_homes_path, :class => is_active('team')} Team
   %li
-    %a{href: press_homes_path} Press
+    %a{href: press_homes_path, :class => is_active('press')} Press
   %li
-    %a{href: new_contact_path} Contact
+    %a{href: new_contact_path, :class => is_active('new')} Contact
