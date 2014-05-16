@@ -1,4 +1,4 @@
-%body#second_page
+%body#living_room
   .container
     .row
       .col-lg-12.col-xs-12
@@ -7,16 +7,15 @@
             .menu
               = render :partial => "main_menu"
             .content_box.main
-              %a.prev{href: lobby_homes_path, :style => "display:block"} Prev
-              %a.next{href: living_room_homes_path, :style => "display:block"} Next
+              %a.prev{href: rooftop_home_path, :style => "display:block"} Prev
+              %a.next{href: kitchen_home_path} Next
               .mainner_box
                 #bh_slide_1
                   .main_box_press.wrapper-parent.lobby_img
-                    = image_tag "rooftop.png"
+                    = image_tag "living_room.png"
                 .content
                   .rooftop
-                    rooftop
-                    lounge
+                    LIVING ROOM
                   .lobby_para
                     %p
                       “Qui ditatem oluptas maxime peritati us mod mil molorerit quia volupta. Bus modis rectorpore, cor rerehen imporita sped ut re, invel modis re
