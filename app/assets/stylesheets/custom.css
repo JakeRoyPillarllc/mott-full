@@ -589,7 +589,7 @@ body#nolita
 }
 .contact_form {
 	 width:65%;
-	margin:20px auto 0;
+	margin:-50px auto 0;
 	text-align:center;
 }
 .contact_form h2{
@@ -682,14 +682,14 @@ body#nolita
 	font-size:12px;
 	text-align:left;	
 }
-.option_box select{
+/*.option_box select{
 	background: none repeat scroll 0 0 #E9F4E9;
   border: 1px solid #C89547;
   border-radius: 0 0 0 0;
   margin-top: 2%;
   padding: 5px;
   width: 100%;
-}
+}*/
 .required{
 	margin-left:4%;
 	color:#c89547;	
@@ -708,6 +708,7 @@ body#nolita
 	float:left;
 	margin-top:10px;
 	border:	1px solid #c89547;
+	background-color: #f9f6ee;
 	resize:none;
 	border-radius: 0 0 0 0;
 	box-shadow: none;
@@ -760,7 +761,7 @@ ul.kitchen_right1 li {
 }
 .availability_img {
   float: left;
-  margin: 2% 8%;
+  margin: 2% 16%;
   width: 70%;
 }
 .availability_img > img
@@ -834,7 +835,8 @@ ul.kitchen_right1 li {
 	float:left;
 }
 .nolita_2 > img {
-    width: 100%;
+    width: 120%;
+    height: 100%;
 }
 .nolita_2 {
     width: 50%;
@@ -1041,4 +1043,21 @@ table tbody,table tr,table td,table th {
 }
 .kitchen_right1.wrapper-parent {
     position: absolute;
+}
+
+.styled-select select {
+	 padding:2px;
+   background: transparent;
+   width: 100%;
+   border: 0;
+   border-radius: 0;
+   -webkit-appearance: none;
+}
+
+.styled-select {
+	margin-top: 4px;
+   width: 100%;
+   overflow: hidden;
+   background: url(arrow_new.png) no-repeat right transparent;
+   border: 1px solid rgb(182, 118, 48);
 }

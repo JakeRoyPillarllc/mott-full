@@ -66,20 +66,24 @@
                     .contact_lower_left
                       .option_box#residence
                         %span WHAT RESIDENCE ARE YOU INTERESTED IN?
-                        = f.select :residence, Contact::RESIDENCE, :prompt => ""
+                        .styled-select
+                          = f.select :residence, Contact::RESIDENCE, :prompt => ""
                         %span#residence_error
                       .option_box#price
                         %span WHAT IS YOUR PRICE RANGE?
-                        %select
-                          %option
+                        .styled-select
+                          %select
+                            %option
                     .contact_lower_right
                       .option_box#hear
                         %span HOW DID YOU HEAR ABOUT US?
-                        = f.select :how_did_you_hear, Contact::HEAR, :prompt => ""
+                        .styled-select
+                          = f.select :how_did_you_hear, Contact::HEAR, :prompt => ""
                         %span#hear_error
                       .option_box#feature
                         %span WHAT IS YOUR MOST IMPORTANT FEATURE?
-                        = f.select :imp_feature, Contact::FEATURE, :prompt => ""
+                        .styled-select
+                          = f.select :imp_feature, Contact::FEATURE, :prompt => ""
                         %span#feature_error
                     .clearfix  
                     .contact_lower_left1
