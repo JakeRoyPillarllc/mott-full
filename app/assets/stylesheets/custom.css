@@ -117,7 +117,6 @@ body#nolita
 .enter_box a {
     /*background: url(enter_border.jpg) no-repeat scroll center center / 100% 68% rgba(0, 0, 0, 0);*/
     color: #784c0c;
-    font-family: Arial,Helvetica,sans-serif;
     font-size: 20px;
      line-height: 100px;
     padding: 6%;
@@ -190,7 +189,7 @@ body#nolita
     font-family: 'TrajanPro-Regular',arial;
     font-size: 15px;
     margin-left: 24px;
-    padding-bottom: 5px;
+    padding-bottom: 7px;
     text-transform: uppercase;
 }
 .menu a:hover, .active {
@@ -751,7 +750,7 @@ body#nolita
 ul.kitchen_right1 li {
   display: inline;
   float: left;
-  height: 68px;
+  height: 66px;
   margin-left: 25px;
   padding: 5px;
 }
