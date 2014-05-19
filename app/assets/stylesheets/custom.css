@@ -1047,12 +1047,13 @@ table tbody,table tr,table td,table th {
 }
 
 .styled-select select {
-	background: url(arrow_new.png) no-repeat right transparent;
+	background: url(arrow_new1.png) no-repeat right transparent;
 	 padding:2px;
-   background: transparent;
    width: 100%;
    border: 0;
    border-radius: 0;
+   text-indent: 0.01px;
+    text-overflow: "";
    -webkit-appearance: none;
 }
 
