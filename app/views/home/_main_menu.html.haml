@@ -34,3 +34,17 @@
     %a{href: press_home_path, :class => is_active('press')} Press
   %li
     %a{href: new_contact_path, :class => is_active('new')} Contact
+
+:javascript
+
+var cur_url = '';
+
+$(document).ready(function() {
+  cur_url = document.location.href.split('/');
+  cur_url = '/'+cur_url[cur_url.length-1]
+  $(".menu ul li ul li a").each(function() {
+    var li_url = $(this).attr('href');
+    if(cur_url == li_url )
+      $(this).parent().parent().siblings().addClass('active');
+  });
+});
