@@ -20,6 +20,7 @@ MottFull::Application.routes.draw do
   get '/availability', to: 'home#availability', as: 'availability_home'
   get '/press', to: 'home#press', as: 'press_home'
   get '/legal', to: 'home#legal', as: 'legal_home'
+  get '/download', to: 'home#download', as: 'download_home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
