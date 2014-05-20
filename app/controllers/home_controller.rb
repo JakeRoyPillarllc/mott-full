@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  IMAGES_PATH = File.join(Rails.root, "public", "images")
   def index
 
   end
@@ -48,4 +49,12 @@ class HomeController < ApplicationController
   def legal
     
   end
+
+  def download
+    send_file(File.join(IMAGES_PATH, "nypost.jpg"))
+    # respond_to do |format|
+    #   format.js
+    # end
+  end
+
 end

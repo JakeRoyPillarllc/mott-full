@@ -14,60 +14,47 @@
                       .inner_press_box
                         .press_box
                           .press_box1
-                            %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("nypost.jpg")}
-                              = image_tag "nypost.jpg"
-                        %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("nypost.jpg")} NY Post - The big 12 - Village Green West 9/9/13
+                            = link_to( image_tag('nypost.jpg'),download_home_path, :file_name =>  'nypost.jpg')
                       .inner_press_box
                         .press_box
                           .press_box1
-                            %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("nypost.jpg")}
-                              = image_tag "nypost.jpg"
-                        %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("nypost.jpg")} NY Post - The big 12 - Village Green West 9/9/13
+                            = link_to( image_tag('nypost.jpg'),download_home_path, :file_name =>  'nypost.jpg')
                       .inner_press_box
                         .press_box
                           .press_box1
-                            %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("nypost.jpg")}
-                              = image_tag "nypost.jpg"
-                        %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("nypost.jpg")} NY Post - The big 12 - Village Green West 9/9/13
+                            = link_to( image_tag('nypost.jpg'),download_home_path, :file_name =>  'nypost.jpg')
                       .inner_press_box
                         .press_box
                           .press_box1
-                            %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("nypost.jpg")}
-                              = image_tag "nypost.jpg"
-                        %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("nypost.jpg")} NY Post - The big 12 - Village Green West 9/9/13
+                            = link_to( image_tag('nypost.jpg'),download_home_path, :file_name =>  'nypost.jpg')
                       .inner_press_box
                         .press_box
                           .press_box1
-                            %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("nypost.jpg")}
-                              = image_tag "nypost.jpg"
-                        %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("nypost.jpg")} NY Post - The big 12 - Village Green West 9/9/13
+                            = link_to( image_tag('nypost.jpg'),download_home_path, :file_name =>  'nypost.jpg')
                       .inner_press_box
                         .press_box
                           .press_box1
-                            %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("nypost.jpg")}
-                              = image_tag "nypost.jpg"
-                        %a{"data-gallery" => "columnwrappers", "data-parent" => ".wrapper-parent", "data-toggle" => "lightbox", href: image_path("nypost.jpg")} NY Post - The big 12 - Village Green West 9/9/13
+                            = link_to( image_tag('nypost.jpg'),download_home_path, :file_name =>  'nypost.jpg')
             = render :partial => "footer"
   :javascript
-    $(document).ready(function ($) {
-    // delegate calls to data-toggle="lightbox"
-    $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
-    event.preventDefault();
-    return $(this).ekkoLightbox({
-    onShown: function() {
-    if (window.console) {
-    return console.log('Checking our the events huh?');
-    }
-    }
-    });
-    });
-    //Programatically call
-    $('#open-image').click(function (e) {
-    e.preventDefault();
-    $(this).ekkoLightbox();
-    });
-    $('#open-youtube').click(function (e) {
-    e.preventDefault();
-    $(this).ekkoLightbox();
-    });
-    });
+    // $(document).ready(function ($) {
+    // $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+    // event.preventDefault();
+    // return $(this).ekkoLightbox({
+    // onShown: function() {
+    // if (window.console) {
+    // return console.log('Checking our the events huh?');
+    // }
+    // }
+    // });
+    // });
+    // //Programatically call
+    // $('#open-image').click(function (e) {
+    // e.preventDefault();
+    // $(this).ekkoLightbox();
+    // });
+    // $('#open-youtube').click(function (e) {
+    // e.preventDefault();
+    // $(this).ekkoLightbox();
+    // });
+    // });

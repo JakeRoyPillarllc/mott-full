@@ -89,15 +89,15 @@
                     .contact_lower_left1
                       .contact_box1
                         %span Are you represented by a broker?
-                        %a{:id => "text_y"} Y
-                        %a{:id => "text_n"} N
-                        = f.hidden_field :represented_by_broaker
+                        .styled-checkbox
+                          %input{name: "Represented", type: "checkbox", :id => "t_broker"}
+                          = f.hidden_field :represented_by_broaker
                     .contact_lower_left2
                       .contact_box1
                         %span Are you a broker?*
-                        %a{:id => "text_new_y"} Y
-                        %a{:id => "text_new_n"} N
-                        = f.hidden_field :broaker
+                        .styled-checkbox
+                          %input{name: "Broker", type: "checkbox", :id => "brokert"}
+                          = f.hidden_field :broaker
                         %span.required * required fields
                     .clearfix  
                     .additional_comment#comment
@@ -110,37 +110,23 @@
             = render :partial => "home/footer"
 
 :javascript
+  function set_hidden(){
+    var val = ($("#brokert").is(":checked"))?"Y" : "N";
+    $("#contact_broaker").val(val);
+  }
+  function set_hidden2(){
+    var val = ($("#t_broker").is(":checked"))?"Y" : "N";
+    $("#contact_represented_by_broaker").val(val);
+  }
   $(document).ready(function(){
-    $(".contact_lower_left1 #text_n").click(function(){
-      if($("#text_n").text() == "N") {
-        $("#text_n").css( "color", "red" );
-        console.log($("#text_n").css( "color", "red" ).text());
-        $("#contact_represented_by_broaker").attr("value","N")
-      }
+    set_hidden();
+    set_hidden2()
+    $("#t_broker").click(function(){
+      set_hidden2();
     })
-    $(".contact_lower_left1 #text_y").click(function(){
-      if($("#text_y").text() == "Y") {
-        $("#text_y").css( "color", "blue" );
-        console.log($("#text_y").css( "color", "blue" ).text());
-        $("#contact_represented_by_broaker").attr("value","Y")
-      }
+    $("#brokert").click(function(){
+      set_hidden();
     })
-
-    $(".contact_lower_left2 #text_new_n").click(function(){
-      if($("#text_new_n").text() == "N") {
-        $("#text_new_n").css( "color", "red" );
-        console.log($("#text_new_n").css( "color", "red" ).text());
-        $("#contact_broaker").attr("value","N")
-      }
-    })
-    $(".contact_lower_left2 #text_new_y").click(function(){
-      if($("#text_new_y").text() == "Y") {
-        $("#text_new_y").css( "color", "blue" );
-        console.log($("#text_new_y").css( "color", "blue" ).text());
-        $("#contact_broaker").attr("value","Y")
-      }
-    })
-
     $(".save_contact").click(function(){
       var first_name = $("#first_name").val()
       var last_name = $("#last_name").val()

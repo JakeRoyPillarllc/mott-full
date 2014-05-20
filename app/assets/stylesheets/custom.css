@@ -1067,3 +1067,9 @@ table tbody,table tr,table td,table th {
 .residence ul li {
 	cursor: pointer;
 }
+.styled-checkbox {
+  border:1px solid #B67630;
+  display: inline;
+  padding: 5px;
+  width: 7%;
+}
