@@ -3,7 +3,7 @@ MottFull::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'home#index'
+  root 'home#main_page'
   resources :contacts
 
   get '/main_page', to: 'home#main_page', as: 'main_page_home'
