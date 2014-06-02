@@ -69,7 +69,7 @@ body#teams{
 	background: url("FV_beast_03.jpg") no-repeat fixed center center / cover rgba(0, 0, 0, 0);	
 }
 body#second_page {
-    background: url("FV_meadow.jpg") no-repeat fixed center center / cover rgba(0, 0, 0, 0);
+    background: url("FV_meadow_tile.jpg") no-repeat fixed center center / cover rgba(0, 0, 0, 0);
 }
 body#contact{
 	background:url("FV_beast_05.jpg")	no-repeat fixed center center / cover rgba(0, 0, 0, 0);
@@ -297,14 +297,14 @@ body#nolita
     width: 100%;
 }
 .content_image{
-	border:	1px solid #C3862D;
+	//border:	1px solid #C3862D;
 	padding:2px;
-	width:30%;
-	margin:18px 98px;
+	width:36%;
+	margin:18px 60px;
 	float:left;
 }
 .content_inner{
-	border: 4px double #C3862D;
+	//border: 4px double #C3862D;
 }
 .content_inner img{
 	width:100%;	
@@ -455,7 +455,7 @@ body#nolita
 	font-size:10px;
 }
 .abt_team img{
-	width:100%;	
+	width:83%;	
 }
 .abt_team1{
 	width:20%;
