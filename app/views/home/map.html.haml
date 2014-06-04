@@ -6,11 +6,9 @@
           .inner_container
             .menu
               = render :partial => "main_menu"
-            .content_box1
-              .content_box2
-                .availability_img
-                  .nolita_1
-                    = image_tag "nolita_12.png"
-                  .nolita_2
-                    = image_tag "nolita_1.png"
+            .content_box
+              %a.prev{href: penthouse_home_path, :style => "display:block"} Prev
+              %a.next{href: map_home_path, :style => "display:block"} Next
+              .mainner_box{style: 'text-align:center'}
+                = image_tag "Mott_Map.png", style: "width:90%"
             = render :partial => "footer"
