@@ -236,6 +236,24 @@ body#nolita
 	background-position:center center;
 	background-size:100% 100%;
 }
+.content_box_left{
+	width:100%;
+	height:640px;
+	padding:10px;	
+	float:left;
+	background:url(Mott_Web_Border_Left.jpg) no-repeat;
+	background-position:center center;
+	background-size:100% 100%;
+}
+.content_box_right{
+	width:100%;
+	height:640px;
+	padding:10px;	
+	float:left;
+	background:url(Mott_Web_Border_Right.jpg) no-repeat;
+	background-position:center center;
+	background-size:100% 100%;
+}
 .content_box1 {
     border: 4px double #C3862D;
     float: left;
@@ -270,6 +288,12 @@ body#nolita
 	float:right;
 	font-size:12px;
 	margin-bottom:10px;
+}
+.footer_right a{
+	color: #C3862D;
+	position:relative;
+	z-index:100;
+	font-size:12px;
 }
 .footer_logo img{
 	width:12%;
