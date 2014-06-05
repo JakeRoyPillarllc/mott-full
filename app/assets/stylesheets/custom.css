@@ -732,7 +732,7 @@ body#nolita
 	float:left;
 	margin-top:10px;
 	border:	1px solid #c89547;
-	background-color: #f9f6ee;
+	background-color: transparent;
 	resize:none;
 	border-radius: 0 0 0 0;
 	box-shadow: none;
@@ -744,13 +744,28 @@ body#nolita
 	margin:20px 0 30px;
 }
 .save_contact{
-	color: #C89547;
+  color: #C89547;
   font-family: 'TrajanPro-Regular',arial;
   font-size: 15px;
   font-weight: bold;
-  padding: 26px 50px;
+  padding: 15px 20px;
   text-transform: uppercase;
-  border: 0;
+  background-color: transparent;
+  border: 4px double #C89547;
+  margin-top:20px;
+  float:left;
+  width:25%;
+}
+.contact-information{
+	display:inline-block;
+	float:left;
+	margin-top:30px;
+	text-transform: uppercase;
+	text-align: left;
+	padding-left:25px;
+	line-height:1.2;
+	font-size:12px;
+	font-family: Verdana, Geneva, sans-serif;
 }
 .sumit_btn a:hover{
 	color:#c89547;	

@@ -11,20 +11,20 @@
             .content_box1
               .content_box2{style: "background:#e9f4e9;"}
                 .clear  
-                .contact_header
-                  %h3
-                    199 Mott street sales gallery
-                    %span by Appointment Only
-                  .contact_box
-                    %p
-                      201 Mott Street — Parlor Floor
-                      New York NY 10012
-                  .contact_box{style: "float:left; text-align:left;"}
-                    %p Tel:  (212) 343 0199
-                    %p Fax: (212) 344 0199
-                  .contact_box{style: "float:right; text-align:right;"}
-                    %p Email: info@199mott.com
-                .clearfix
+                / .contact_header
+                /   %h3
+                /     199 Mott street sales gallery
+                /     %span by Appointment Only
+                /   .contact_box
+                /     %p
+                /       201 Mott Street — Parlor Floor
+                /       New York NY 10012
+                /   .contact_box{style: "float:left; text-align:left;"}
+                /     %p Tel:  (212) 343 0199
+                /     %p Fax: (212) 344 0199
+                /   .contact_box{style: "float:right; text-align:right;"}
+                /     %p Email: info@199mott.com
+                / .clearfix
                 .contact_form
                   = form_for @contact do |f|
                     %h2 Please fill out this form to learn more about 199 mott
@@ -66,47 +66,62 @@
                     .contact_lower_left
                       .option_box#residence
                         %span WHAT RESIDENCE ARE YOU INTERESTED IN?
-                        .styled-select
-                          = f.select :residence, Contact::RESIDENCE, :prompt => ""
+                        .text_box
+                          = f.text_field :residence, :id => "residence", :style => "width:100%;"
                         %span#residence_error
                       .option_box#price
                         %span WHAT IS YOUR PRICE RANGE?
-                        .styled-select
-                          %select
-                            %option
+                        .text_box
+                          = f.text_field :price, :id => "price", :style => "width:100%;"
                     .contact_lower_right
                       .option_box#hear
                         %span HOW DID YOU HEAR ABOUT US?
-                        .styled-select
-                          = f.select :how_did_you_hear, Contact::HEAR, :prompt => ""
+                        .text_box
+                          = f.text_field :how_did_you_hear, :id => "how_did_you_hear", :style => "width:100%;"
                         %span#hear_error
                       .option_box#feature
                         %span WHAT IS YOUR MOST IMPORTANT FEATURE?
-                        .styled-select
-                          = f.select :imp_feature, Contact::FEATURE, :prompt => ""
+                        .text_box
+                          = f.text_field :imp_feature, :id => "imp_feature", :style => "width:100%;"
                         %span#feature_error
                     .clearfix  
                     .contact_lower_left1
                       .contact_box1
-                        %span Are you represented by a broker?
+                        %span{style:"font-family: Verdana, Geneva, sans-serif;"} 
+                          Are you represented by a broker?
                         .styled-checkbox
                           %input{name: "Represented", type: "checkbox", :id => "t_broker"}
                           = f.hidden_field :represented_by_broaker
                     .contact_lower_left2
                       .contact_box1
-                        %span Are you a broker?*
+                        %span{style:"font-family: Verdana, Geneva, sans-serif;"} 
+                          Are you a broker?*
                         .styled-checkbox
                           %input{name: "Broker", type: "checkbox", :id => "brokert"}
                           = f.hidden_field :broaker
                         %span.required * required fields
                     .clearfix  
                     .additional_comment#comment
-                      %span Additional Comments
-                      = f.text_area :comment, :cols => "2", :rows => "5", :id => "comment_field"
+                      %span{style:"font-family: Verdana, Geneva, sans-serif;font-size:12px;"}  
+                        ADDITIONAL COMMENTS
+                      = f.text_area :comment, :cols => "2", :rows => "3", :id => "comment_field"
                       %span#comment_error
                     .clearfix  
-                    .sumit_btn
-                      = f.submit "Submit", :class => "save_contact"
+                    = f.submit "Submit", :class => "save_contact"
+                    .contact-information
+                      by Appointment Only
+                      %br
+                      201 Mott Street — Parlor Floor
+                      %br
+                      New York NY 10012
+                    .contact-information
+                      %br
+                      Tel:  (212) 343 0199
+                      %br
+                      Email: info@199mott.com
+
+
+
             = render :partial => "home/footer"
 
 :javascript
